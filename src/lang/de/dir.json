@@ -1,3 +1,6 @@
 {
-    "supported": ["index.html"]
+    "supported": ["index.html"],
+    "index.html": [
+        ["top", false, "src/lang/de/assets/top.html"]
+    ]
 }
