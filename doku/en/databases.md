@@ -11,3 +11,17 @@
       - "sub-txt" - str  - the text under the recepie
       - "pic"     - str+ - (+:url->png) the image for the recepi
 ```
+
+# alcaholic drinks
+- /src/db/drinks.json
+```
+-                 - jso  - the json has multiple of the following object
+  - <kategory>    - lst  - the name of the category:
+    - ?           - jso  - one recepie
+      - "name"    - str  - the name of the recepie
+      - "time"    - str  - the time it takes to brew
+      - "distill" - str+ - (+:bol(desing)) does it have to be distilled
+      - "ageing"  - str+ - (+:int+time-word) the age of the ageing
+      - "wood"    - str  - wich wood
+      - "pic"     - str+ - (+:url->png) image of the drink
+```
