@@ -1,0 +1,93 @@
+#recipes-container table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f0f0f0;
+    background-color: #1b1b1b;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+#recipes-container th {
+    background: linear-gradient(0deg, #3a3a3a, #2c2c2c);
+    color: #fff;
+    padding: 14px 12px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #444;
+}
+
+#recipes-container td {
+    background-color: #262626;
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    vertical-align: middle;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#recipes-container tbody tr:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+#recipes-container td img {
+    width: 100px;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s;
+}
+
+#recipes-container td img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    #recipes-container table, 
+    #recipes-container thead, 
+    #recipes-container tbody, 
+    #recipes-container th, 
+    #recipes-container td, 
+    #recipes-container tr {
+        display: block;
+        width: 100%;
+    }
+
+    #recipes-container thead tr {
+        display: none;
+    }
+
+    #recipes-container td {
+        padding: 12px;
+        text-align: right;
+        position: relative;
+        border: none;
+        border-bottom: 1px solid #333;
+    }
+
+    #recipes-container td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 12px;
+        width: 45%;
+        padding-right: 10px;
+        font-weight: 700;
+        text-align: left;
+        color: #ccc;
+        font-size: 0.95rem;
+    }
+
+    #recipes-container td img {
+        width: 80px;
+        margin: 8px 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
