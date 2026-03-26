@@ -1,0 +1,70 @@
+{
+  "Weapons": [
+    {
+      "name": "Musket",
+      "top-txt": "Can shoot or hit enemies.",
+      "sub-txt": "20 hearts ranged damage, iron sword melee damage.",
+      "pic": "./src/img/recipes/musket.png"
+    },{
+      "name": "Musket Ammo",
+      "top-txt": "Required for shooting.",
+      "sub-txt": "Items can be arranged freely.",
+      "pic": "./src/img/recipes/musketammo.png"
+    },{
+      "name": "Knife",
+      "top-txt": "Stab someone to death.",
+      "sub-txt": "Close range weappon.",
+      "pic": "./src/img/recipes/knife.png"
+    }
+  ],
+
+  "Tools": [
+    {
+      "name": "Wooden Chopper",
+      "top-txt": "Breaks logs above.",
+      "sub-txt": "Same type logs only.",
+      "pic": "./src/img/recipes/wooden_chopper.png"
+    },{
+      "name": "Lumber Axe",
+      "top-txt": "Improved chopper.",
+      "sub-txt": "Breaks more logs vertically.",
+      "pic": "./src/img/recipes/lumber_axe.png"
+    }
+  ],
+  "Armor": [
+   {
+      "name": "Crown",
+      "top-txt": "to demonstrate your wealth",
+      "sub-txt": "Helmet",
+      "pic": "./src/img/recipes/crown.png"
+    },{
+      "name": "Knight Helmet",
+      "top-txt": "makes it seam like your a knight.",
+      "sub-txt": "Helmet //add strenght",
+      "pic": "./src/img/recipes/knight_helmet.png"
+    }
+  ],
+  "Foods": [
+    {
+      "name": "Dough",
+      "top-txt": "Base ingredient.",
+      "sub-txt": "Free arrangement.",
+      "pic": "./src/img/recipes/dough.png"
+    },{
+      "name": "Ground Beef",
+      "top-txt": "Yes. Really.",
+      "sub-txt": "Free arrangement.",
+      "pic": "./src/img/recipes/ground_beef.png"
+    },{
+      "name": "Döner Kebab",
+      "top-txt": "Signature food.",
+      "sub-txt": "Free arrangement.",
+      "pic": "./src/img/recipes/doner.png"
+    },{
+      "name": "Spinning Kebab",
+      "top-txt": "A Kebab that spinns!",
+      "sub-txt": "any flesh exept fish and pork.",
+      "pic": "./src/img/recipes/spinning_kebab.png"
+    }
+  ]
+}
