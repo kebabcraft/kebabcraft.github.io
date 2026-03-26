@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KebabCraftMC</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="theme-toggle.js"></script>
+    <link rel="shortcut icon" href="./src/img/favicon.webp" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="fullhomething"><a href="index.html"><img class="home" src="./src/img/favicon.webp" alt="" /><img class="home-image-two" src="./src/img/kebabcrafttext.png" alt="KebabCraftMC"></a></div>
+            <ul class="nav-links">
+                <li><button class="theme-toggle" onclick="toggleTheme()"><img src="./src/img/lightdarkicon.png" alt="Light/dark mode"></button></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./join.html">Join</a></li>
+                <li><a href="./rules.html">Rules</a></li>
+                <li><a href="./store.html">Store</a></li>
+                <li><a href="./updates.html">Updates</a></li>
+                <li><a href="./socials.html">Socials</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+  <canvas id="sky"></canvas>
+  <div class="hero-content">
+    <h1><img src="./src/img/kebabcrafttext.png" alt="KebabCraftMC"></h1>
+    <h1>Help</h1>
+    <p>Find everything you need</p>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="./panorama.js"></script>
+    
+    <main>
+        <section class="updates">
+            <ul class="update-grid">
+                <li class="update-card">
+                    <h3>Custom Items</h3>
+                    <p><a href="./custom-items.html">Understand how our custom items work and how you craft them</a></p>
+                </li>
+                <li class="update-card">
+                    <h3>Find Bugs?</h3>
+                    <p><a href="./socials.html">Join Our Discord to report them!</a></p>
+                </li>
+                <li class="update-card">
+                    <h3>Earth World? Farmworld? Farmsworld?</h3>
+                    <p><a href="./worlds.html">Learn how our world system works!</a></p>
+                </li>
+                <li class="update-card">
+                    <h3>Need additional Help?</h3>
+                    <p><a href="./socials.html">Find it in our Discord!</a></p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KebabCraftMC. All rights reserved. - Not an official Minecraft Product. Not affiliated with Mojang or microsoft.</p>
+    </footer>
+</body>
+</html>

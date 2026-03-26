@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KebabCraftMC</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="theme-toggle.js"></script>
+    <link rel="shortcut icon" href="./src/img/favicon.webp" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="fullhomething"><a href="index.html"><img class="home" src="./src/img/favicon.webp" alt="" /><img class="home-image-two" src="./src/img/kebabcrafttext.png" alt="KebabCraftMC"></a></div>
+            <ul class="nav-links">
+                <li><button class="theme-toggle" onclick="toggleTheme()"><img src="./src/img/lightdarkicon.png" alt="Light/dark mode"></button></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./join.html">Join</a></li>
+                <li><a href="./rules.html">Rules</a></li>
+                <li><a href="./store.html">Store</a></li>
+                <li><a href="./updates.html">Updates</a></li>
+                <li><a href="./socials.html">Socials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+  <canvas id="sky"></canvas>
+  <div class="hero-content">
+    <h1><img src="./src/img/kebabcrafttext.png" alt="KebabCraftMC"></h1>
+    <h1>The ultimate Earth SMP Minecraft experience.</h1>
+    <a href="join.html" class="btn">Join Now</a>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="./panorama.js"></script>
+
+        <section class="features">
+            <h2>Why Play on KebabCraftMC?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🌍 Real Earth Map</h3>
+                    <p>Explore a 1:326 scale Earth map with custom biomes and terrain.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚒️ Claim & Build</h3>
+                    <p>Claim land, create towns, and build your empire.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🤝 Active Community</h3>
+                    <p>Friendly players, staff events, and Discord integration.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ip-section">
+            <h2>Server IP:</h2>
+            <code onclick="copyToClipboard(this)">play.kebabcraft.net</code>
+            <h2>Bedrock Port:</h2>
+            <code onclick="copyToClipboard(this)">19132</code>
+            <script>
+            function copyToClipboard(element) {
+            const text = element.textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                    alert("Copied: " + text);
+            }).catch(err => {
+            console.error('Failed to copy: ', err);
+            });
+            }
+            </script>
+
+            <p>Version: 1.21.11+</p>
+        </section>
+        <section class="updates">
+            <ul class="update-grid">
+                <li class="update-card">
+                    <h3>Need Help?</h3>
+                    <p><a class="btn" href="help.html">Find Help here</a></p>
+                </li>
+            </ul>
+        </section>
+        <section class="updates">
+            <ul class="update-grid">
+                <li class="update-card">
+                    <a href="http://play.kebabcraft.net:49827"><h1>Server Map</h1></a>
+                    <iframe class="earthmap" src="http://play.kebabcraft.net:49827" frameborder="0"></iframe>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KebabCraftMC. All rights reserved. - Not an official Minecraft Product. Not affiliated with Mojang or microsoft.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KebabCraftMC</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="theme-toggle.js"></script>
+    <link rel="shortcut icon" href="./src/img/favicon.webp" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="fullhomething"><a href="index.html"><img class="home" src="./src/img/favicon.webp" alt="" /><img class="home-image-two" src="./src/img/kebabcrafttext.png" alt="KebabCraftMC"></a></div>
+            <ul class="nav-links">
+                <li><button class="theme-toggle" onclick="toggleTheme()"><img src="./src/img/lightdarkicon.png" alt="Light/dark mode"></button></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./join.html">Join</a></li>
+                <li><a href="./rules.html">Rules</a></li>
+                <li><a href="./store.html">Store</a></li>
+                <li><a href="./updates.html">Updates</a></li>
+                <li><a href="./socials.html">Socials</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+  <canvas id="sky"></canvas>
+  <div class="hero-content">
+    <h1><img src="./src/img/kebabcrafttext.png" alt="KebabCraftMC"></h1>
+    <h1>Worlds</h1>
+    <p>How our world system works</p>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="./panorama.js"></script>
+    
+    <main>
+        <section class="updates">
+            <ul class="update-grid">
+                We have 3 types of worlds
+                <li class="update-card">
+                    <h3>Earth Type</h3>
+                    <p>This type of world is a 1:326 replica of the real life Earth</p>
+                </li>
+                <li class="update-card">
+                    <h3>Minecraft Type</h3>
+                    <p>This type of world is a normal minecraft world</p>
+                </li>
+                <li class="update-card">
+                    <h3>Lobby Type</h3>
+                    <p>You can access all types of worlds from here</p>
+                </li>
+                And we have 4 Worlds:
+                <li class="update-card">
+                    <h3>Earth World</h3>
+                    <p>This World is earth type, you can claim here, and this is the main part of the server.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Farmworld</h3>
+                    <p>This World is meant for farming resources, so that the earth world doesn't suffer from gigantic holes and stuff like that.</p>
+                    <p>This World is Minecraft Type.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Farmsworld</h3>
+                    <p>You can build your ugly farms in this world, so that you dont have to look at them in the Earth World.</p>
+                    <p>This World is Minecraft Type.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Lobby</h3>
+                    <p>You can access all Worlds from here and you can access this world from all worlds with /lobby. A peaceful nice hangout spot with a very legal cartel.</p>
+                    <p>This World is Lobby Type.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KebabCraftMC. All rights reserved. - Not an official Minecraft Product. Not affiliated with Mojang or microsoft.</p>
+    </footer>
+</body>
+</html>

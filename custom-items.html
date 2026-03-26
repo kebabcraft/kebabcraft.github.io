@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KebabCraftMC</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="theme-toggle.js"></script>
+    <link rel="shortcut icon" href="./src/img/favicon.webp" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="fullhomething"><a href="index.html"><img class="home" src="./src/img/favicon.webp" alt="" /><img class="home-image-two" src="./src/img/kebabcrafttext.png" alt="KebabCraftMC"></a></div>
+            <ul class="nav-links">
+                <li><button class="theme-toggle" onclick="toggleTheme()"><img src="./src/img/lightdarkicon.png" alt="Light/dark mode"></button></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./join.html">Join</a></li>
+                <li><a href="./rules.html">Rules</a></li>
+                <li><a href="./store.html">Store</a></li>
+                <li><a href="./updates.html">Updates</a></li>
+                <li><a href="./socials.html">Socials</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+  <canvas id="sky"></canvas>
+  <div class="hero-content">
+    <h1><img src="./src/img/kebabcrafttext.png" alt="KebabCraftMC"></h1>
+    <h1>Custom Items</h1>
+    <p>Uses and Recipes</p>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="./panorama.js"></script>
+    
+    <main>
+        <section class="updates">
+            <ul class="update-grid">
+                We have 3 types of custom items as of the moment
+                <li class="update-card">
+                    <h3>Weapons</h3>
+                    <p>This type item is either a weapon or a weapon accessory</p>
+                </li>
+                <li class="update-card">
+                    <h3>Tools</h3>
+                    <p>This type of item is a tool that has custom abilities</p>
+                </li>
+                <li>
+                    <h3>Armor</h3>
+                    <p>This type of item is just armor with cosmetics, but its unbreakable and as strong as a diamond helmet!</p>
+                </li>
+                <li class="update-card">
+                    <h3>Foods</h3>
+                    <p>You can eat or drink them for fun!</p>
+                </li>
+                Since we have so many custom items, we will show them in their corresponding sections.
+                <h2>Weapons</h2>
+                as of the moment, we have 2 weapon items:
+                <li class="update-card">
+                    <h3>Musket</h3>
+                    <p>This Weapon can be used to shoot or to hit, with a shooting damage of 20 hearts and the hitting damage of an iron sword.</p>
+                    <p>you can also enchant this weapon with any enchantments of a minecraft iron sword</p>
+                    <p>you can craft it with these ingredients in this exact pattern:</p>
+                    <img src="./src/img/recipes/musket.png" alt="image failed to load">
+                </li>
+                <li class="update-card">
+                    <h3>Musket ammo</h3>
+                    <p>Of course, if you want to shoot with a musket you're gonna need some ammo for that.</p>
+                    <p>So, we came up with a recipe that has a reasonable price.</p>
+                    <img src="./src/img/recipes/musketammo.png" alt="image failed to load">
+                    <p>you can arrange the items in any way you like</p>
+                </li>
+                <h2>Tools</h2>
+                for now, we have 6 tools and 2 tool items, but we plan to expand to 12 tools and 4 tool items:
+                <p></code>DISCLAIMER: tools are not in the game because of game breaking glitches. we will add them soon.</p>
+                <h3>Axes:</h3>
+                <li class="update-card">
+                    <h3>Compressed Log</h3>
+                    <p>This is a tool item used to craft other tools.</p>
+                    <p>It's crafted by compressing 9 logs:</p>
+                    <img src="./src/img/recipes/compressed_log.png" alt="image failed to load">
+                </li>
+                <li class="update-card">
+                    <h3>Wooden Chopper</h3>
+                    <p>This is the first axe in the custom axe line.</p>
+                    <p>It can destroy the log above the log you broke, as long as both are a log and they are made of the same type of log.</p>
+                    <img src="./src/img/recipes/wooden_chopper.png" alt="image failed to load">
+                    <p>To Craft it you need to follow this exact arrangement.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Lumber Axe</h3>
+                    <p>This is the second axe in the custom axe line.</p>
+                    <p>Its functionality is very similar to the one of the wooden chopper, just that it can break one block more.</p>
+                    <img src="./src/img/recipes/lumber_axe.png" alt="image failed to load">
+                    <p>To Craft it you need to follow this exact arrangement.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Tree Capitator</h3>
+                    <p>This is the final axe in the custom axe line.</p>
+                    <p>It works just like the other two axes in the axe tree, just that it can break 100 logs vertically</p>
+                    <img src="./src/img/recipes/tree_capitator.png" alt="image failed to load">
+                    <p>To Craft it you need to follow this exact arrangement.</p>
+                </li>
+
+                <h3>Pickaxes:</h3>
+                <li class="update-card">
+                    <h3>Compressed Obsidian</h3>
+                    <p>This is a tool item used to craft other tools.</p>
+                    <p>It's crafted by compressing 9 Obsidian:</p>
+                    <img src="./src/img/recipes/compressed_obsidian.png" alt="image failed to load">
+                </li>
+                <li class="update-card">
+                    <h3>Stony Picker</h3>
+                    <p>This is the first pickaxe in the custom pickaxe line.</p>
+                    <p>It can destroy the block above the block you broke, making strip mining easier.</p>
+                    <img src="./src/img/recipes/stonypicker.png" alt="image failed to load">
+                    <p>To Craft it you need to follow this exact arrangement.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Miner Pickaxe</h3>
+                    <p>This is the second pickaxe in the custom pickaxe line.</p>o
+                    <p>Its functionality is very similar to the one of the stony picker, just that it can break blocks faster,</p>
+                    <p>is capable of mining ores like diamonds, and can mine entire ore veins at once.</p>
+                    <img src="./src/img/recipes/miner_pickaxe.png" alt="image failed to load">
+                    <p>To Craft it you need to follow this exact arrangement.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Rock Splitter</h3>
+                    <p>This is the final pickaxe in the custom axe line.</p>
+                    <p>This OP Pickaxe can mine an entire 3x3 plane at once,</p>
+                    <p>and has all the other specs of a netherite pickaxe, and can mine entire ore veins at once!</p>
+                    <img src="./src/img/recipes/rock_splitter.png" alt="image failed to load">
+                    <p>To Craft it you need to follow this exact arrangement.</p>
+                </li>
+                <h2>Armor:</h2>
+                we have 2 Armor Items.
+                <li class="update-card">
+                    <h3>Knight Helmet</h3>
+                    <p>This is a Knight's helmet and its unbreakable!</p>
+                    <img src="./src/img/recipes/knight_helmet.png" alt="image failed to load">
+                    <p>Exact arrangement required.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Crown</h3>
+                    <p>This is a King's Crown and its unbreakable!</p>
+                    <img src="./src/img/recipes/crown.png" alt="image failed to load">
+                    <p>Exact arrangement required.</p>
+                </li>
+                <h2>Foods:</h2>
+                We have 2 Food related items and 9 Custom Foods.
+                We also have some drinks from BreweryX and were working on custom textures and a better documentation.
+                <P><code>DISCLAIMER: THE ITEM OUTPUT COUNTS IN THE RECIPES MIGHT NOT REPRESENT THE ONES IN GAME!</code></P>
+                <li class="update-card">
+                    <h3>Dough</h3>
+                    <p>This is a food item used in a lot of food recipes.</p>
+                    <img src="./src/img/recipes/dough.png" alt="image failed to load">
+                    <p>You can arrange the items at your liking.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Ground Beef</h3>
+                    <p>Yes. Really.</p>
+                    <img src="./src/img/recipes/ground_beef.png" alt="image failed to load">
+                    <p>You can arrange the items at your liking.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Perogi</h3>
+                    <p>Eat this italian specialty for fun!</p>
+                    <img src="./src/img/recipes/perogi.png" alt="image failed to load">
+                    <p>Exact arrangement required.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Calzone</h3>
+                    <p>Who combined Pizza and Perogi?!</p>
+                    <img src="./src/img/recipes/calzone.png" alt="image failed to load">
+                    <p>Exact arrangement required.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Pasta</h3>
+                    <p>YAY SPAGHETTI!</p>
+                    <img src="./src/img/recipes/pasta.png" alt="image failed to load">
+                    <p>You can arrange the items at your liking.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Knife</h3>
+                    <p>Better Not Eat it! Used to make fries and toast.</p>
+                    <img src="./src/img/recipes/knife.png" alt="image failed to load">
+                    <p>Exact arrangement required, but you can move the position in the grid around.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Fries</h3>
+                    <p>We gotta get some american culture in here!</p>
+                    <img src="./src/img/recipes/fries.png" alt="image failed to load">
+                    <p>You can arrange the items at your liking.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Sweetberry Jam</h3>
+                    <p>Gramma makes the best one!</p>
+                    <img src="./src/img/recipes/sweetberryjam.png" alt="image failed to load">
+                    <p>You can arrange the items at your liking.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Toast</h3>
+                    <p>We need some variation to our bread!</p>
+                    <img src="./src/img/recipes/toast.png" alt="image failed to load">
+                    <p>You can arrange the items at your liking.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Toast with Sweetberry Jam</h3>
+                    <p>A great combination!</p>
+                    <img src="./src/img/recipes/sweetberrytoast.png" alt="image failed to load">
+                    <p>You can arrange the items at your liking.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Döner Kebab</h3>
+                    <p>What did you expect? It's in our Name!</p>
+                    <img src="./src/img/recipes/doner.png" alt="image failed to load">
+                    <p>You can arrange the items at your liking.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KebabCraftMC. All rights reserved. - Not an official Minecraft Product. Not affiliated with Mojang or microsoft.</p>
+    </footer>
+</body>
+</html>

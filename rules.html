@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>KebabCraftMC</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="theme-toggle.js"></script>
+    <link rel="shortcut icon" href="./src/img/favicon.webp" type="image/x-icon"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="fullhomething"><a href="index.html"><img class="home" src="./src/img/favicon.webp" alt="" /><img class="home-image-two" src="./src/img/kebabcrafttext.png" alt="KebabCraftMC"></a></div>
+            <ul class="nav-links">
+                <li><button class="theme-toggle" onclick="toggleTheme()"><img src="./src/img/lightdarkicon.png" alt="Light/dark mode"></button></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./join.html">Join</a></li>
+                <li><a href="./rules.html">Rules</a></li>
+                <li><a href="./store.html">Store</a></li>
+                <li><a href="./updates.html">Updates</a></li>
+                <li><a href="./socials.html">Socials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+  <canvas id="sky"></canvas>
+  <div class="hero-content">
+    <h1><img src="./src/img/kebabcrafttext.png" alt="KebabCraftMC"></h1>
+    <h1>Server Rules</h1>
+    <p>and punishments</p>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="./panorama.js"></script>
+
+        <section class="rules">
+            <div class="rule-block">
+                <h2>1. No Explicit or Inappropriate Content</h2>
+                <ul>
+                    <li>No NSFW builds, signs, books, or skins.</li>
+                    <li>No gore, shock content, or disturbing materials.</li>
+                </ul>
+                <p class="punishment"><strong>Punishment:</strong> Immediate warn or ban, depending on severity.</p>
+            </div>
+
+            <div class="rule-block">
+                <h2>2. No Spamming</h2>
+                <ul>
+                    <li>No spam in chat (e.g. repeated messages or characters, even if it's a single word).</li>
+                </ul>
+                <p class="punishment"><strong>Punishment:</strong> Warn or Mute</p>
+            </div>
+
+            <div class="rule-block">
+                <h2>3. Use Respectful Language</h2>
+                <ul>
+                    <li>Swearing is allowed within reason — excessive profanity = mute/warn.</li>
+                    <li>Racial slurs = instant ban (length determined by staff).</li>
+                    <li>Hate speech = warn or ban, depending on severity.</li>
+                    <li>Targeted harassment or toxic behavior = mute and/or warn.</li>
+                </ul>
+            </div>
+
+            <div class="rule-block">
+                <h2>4. Respect Other Players</h2>
+                <ul>
+                    <li>No griefing or trolling outside of declared wars/conflict.</li>
+                    <li>No bypassing war rules for harassment.</li>
+                    <li>No spawn killing.</li>
+                    <li>No naked killing.</li>
+                </ul>
+                <p class="punishment"><strong>Punishment:</strong> Warn or ban, depending on severity.</p>
+            </div>
+
+            <div class="rule-block">
+                <h2>5. Sensitive Topics</h2>
+                <ul>
+                    <li>Avoid trolling with sensitive topics like race, religion, or war crimes.</li>
+                </ul>
+                <p class="punishment"><strong>Punishment:</strong> Warn, mute, or ban depending on content and intent.</p>
+            </div>
+
+            <div class="rule-block">
+                <h2>6. Use Systems Properly</h2>
+                <ul>
+                    <li>Do not exploit bugs, glitches, or unintended mechanics.</li>
+                </ul>
+                <p class="punishment"><strong>Punishment:</strong> Warn or ban</p>
+            </div>
+
+            <div class="rule-block">
+                <h2>7. No Hacking or Cheating</h2>
+                <ul>
+                    <li>No use of hack clients, mods, resourcepacks, etc (e.g. kill aura, fly, x-ray, baritone, etc.).</li>
+                    <li>Bypass cheats are still considered hacking.</li>
+                    <li>Any item/block/money duplication is considered cheating.</li>
+                </ul>
+                <p class="punishment"><strong>Punishment:</strong> Instant ban, length depends on severity.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KebabCraftMC. All rights reserved. - Not an official Minecraft Product. Not affiliated with Mojang or microsoft.</p>
+    </footer>
+</body>
+</html>
