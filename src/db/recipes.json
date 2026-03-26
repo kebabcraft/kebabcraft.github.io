@@ -63,7 +63,7 @@
     },{
       "name": "Spinning Kebab",
       "top-txt": "A Kebab that spinns!",
-      "sub-txt": "any flesh exept fish and pork.",
+      "sub-txt": "any meat exept fish and pork.",
       "pic": "./src/img/recipes/spinning_kebab.png"
     }
   ]
