@@ -16,7 +16,7 @@
 - /src/db/drinks.json
 ```
 -                 - jso  - the json has multiple of the following object
-  - <kategory>    - lst  - the name of the category:
+  - "drinks"      - lst  - a list of the drincs
     - ?           - jso  - one recepie
       - "name"    - str  - the name of the recepie
       - "time"    - str  - the time it takes to brew
