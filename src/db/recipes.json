@@ -40,7 +40,7 @@
     },{
       "name": "Knight Helmet",
       "top-txt": "makes it seam like your a knight.",
-      "sub-txt": "Helmet //add strenght",
+      "sub-txt": "Helmet <!-- add strenght-->",
       "pic": "./src/img/recipes/knight_helmet.png"
     }
   ],
