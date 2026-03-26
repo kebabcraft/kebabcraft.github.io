@@ -10,10 +10,8 @@ async function loadRecipes() {
             return;
         }
 
-        // Create table
         const table = document.createElement("table");
 
-        // Table header
         const thead = document.createElement("thead");
         thead.innerHTML = `
             <tr>
@@ -27,7 +25,6 @@ async function loadRecipes() {
         `;
         table.appendChild(thead);
 
-        // Table body
         const tbody = document.createElement("tbody");
 
         data.drinks.forEach(drink => {
