@@ -55,7 +55,6 @@
         </section>
 
         <script>
-        // Default-Skin
         const defaultSkin = "https://api.mineatar.io/body/full/aab62631839344588fee11c4414cee48?scale=16";
         const teamData = {
             "Owners": [
@@ -95,7 +94,7 @@
             ]
         };
 
-        // Add card data for overlay (description + socials)
+        // Add card data for overlay
         for (const category of Object.values(teamData)) {
             category.forEach(member => {
                 member.card = {
@@ -128,22 +127,7 @@
 
                 // Click to show overlay
                 li.addEventListener("click", () => {
-                    document.getElementById("overlay").classList.remove("hidden");
-
-                    document.getElementById("overlay-skin").src = skinUrl;
-                    document.getElementById("overlay-name").textContent = member.name;
-                    document.getElementById("overlay-rank").textContent = member.rank;
-                    document.getElementById("overlay-description").textContent = member.card.ldis;
-
-                    const socialsDiv = document.getElementById("overlay-socials");
-                    socialsDiv.innerHTML = "";
-                    member.card.sm.forEach(social => {
-                        const a = document.createElement("a");
-                        a.href = social[1];
-                        a.textContent = social[0];
-                        a.target = "_blank";
-                        socialsDiv.appendChild(a);
-                    });
+                    openOverlay(member, skinUrl);
                 });
 
                 ul.appendChild(li);
@@ -152,24 +136,64 @@
             container.appendChild(catDiv);
         }
 
-        // Close overlay
-        document.getElementById("close-overlay").addEventListener("click", () => {
-            document.getElementById("overlay").classList.add("hidden");
+        // Overlay functions
+        const overlay = document.getElementById("overlay");
+        const overlayContent = overlay.querySelector(".overlay-content");
+        const overlaySkin = document.getElementById("overlay-skin");
+        const overlayName = document.getElementById("overlay-name");
+        const overlayRank = document.getElementById("overlay-rank");
+        const overlayDescription = document.getElementById("overlay-description");
+        const overlaySocials = document.getElementById("overlay-socials");
+        const closeOverlayBtn = document.getElementById("close-overlay");
+
+        function openOverlay(member, skinUrl) {
+            overlaySkin.src = skinUrl;
+            overlayName.textContent = member.name;
+            overlayRank.textContent = member.rank;
+            overlayDescription.textContent = member.card.ldis;
+
+            overlaySocials.innerHTML = "";
+            member.card.sm.forEach(social => {
+                const a = document.createElement("a");
+                a.href = social[1];
+                a.textContent = social[0];
+                a.target = "_blank";
+                overlaySocials.appendChild(a);
+            });
+
+            overlay.classList.add("show");
+        }
+
+        function closeOverlay() {
+            overlay.classList.remove("show");
+        }
+
+        // Close overlay on button
+        closeOverlayBtn.addEventListener("click", closeOverlay);
+
+        // Close overlay when clicking outside content
+        overlay.addEventListener("click", (e) => {
+            if (!overlayContent.contains(e.target)) {
+                closeOverlay();
+            }
+        });
+
+        // Close overlay on ESC key
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") closeOverlay();
         });
         </script>
     </main>
 
-    <!-- Overlay for large card -->
+    <!-- Overlay HTML -->
     <div id="overlay" class="overlay hidden">
         <div class="overlay-content">
             <button id="close-overlay">✖</button>
-
             <div class="overlay-left">
                 <img id="overlay-skin" src="" alt="">
                 <h2 id="overlay-name"></h2>
                 <p id="overlay-rank"></p>
             </div>
-
             <div class="overlay-right">
                 <p id="overlay-description"></p>
                 <div id="overlay-socials"></div>
@@ -177,12 +201,8 @@
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 KebabCraftMC. All rights reserved.</p>
-    </footer>
-
     <style>
-    /* Overlay styles */
+    /* Overlay styles with smooth animation */
     .overlay {
         position: fixed;
         top: 0;
@@ -194,10 +214,14 @@
         align-items: center;
         justify-content: center;
         z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
     }
 
-    .hidden {
-        display: none;
+    .overlay.show {
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .overlay-content {
@@ -210,6 +234,12 @@
         width: 90%;
         color: white;
         position: relative;
+        transform: scale(0.7);
+        transition: transform 0.3s ease;
+    }
+
+    .overlay.show .overlay-content {
+        transform: scale(1);
     }
 
     .overlay-left img {
@@ -234,5 +264,9 @@
         text-decoration: underline;
     }
     </style>
+
+    <footer>
+        <p>&copy; 2025 KebabCraftMC. All rights reserved.</p>
+    </footer>
 </body>
 </html>
