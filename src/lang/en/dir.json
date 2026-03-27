@@ -1,0 +1,6 @@
+{
+    "supported": ["index.html"],
+    "index.html": [
+        ["top", false, "src/lang/en/assets/top.html"]
+    ]
+}
