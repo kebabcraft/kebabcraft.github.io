@@ -29,9 +29,15 @@
 # staff
 - about.html\script
 ```
-- <k>        - lst   - <k> name of the category
-  - ?        - jso   - a card
-    - "name" - str   - the name of the player
-    - "rank" - str   - the rank of the player
-    - "skin" - str+) - (+:url)(->?skin) the link to the player model of the player
+- <k>          - lst   - <k> name of the category
+  - ?          - jso   - a card
+    - "name"   - str   - the name of the player
+    - "rank"   - str   - the rank of the player
+    - "skin"   - str+) - (+:url->png+)(->?skin) the link to the player model of the player
+    - "card"   - jso   - the big card of the player
+      - "ldis" - str   - their description
+      - "sm"   - lst   - their social-media connections
+        - ?    - lst:2 - one social-media connection
+          - 0  - str   - the text to show
+          - 1  - str+  - (+:url) the link to the account
 ```
