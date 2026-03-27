@@ -7,5 +7,92 @@
                 <li><a href="./store.html">Store</a></li>
                 <li><a href="./updates.html">Updates</a></li>
                 <li><a href="./socials.html">Socials</a></li>
-                <li><p>translatet</p></li>
+<!--##########-->
+<div id="lang-chose"></div>
+<style>
+  #lang-chose {
+    position: relative;
+    width: 40px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .lang-current img {
+    width: 100%;
+    border-radius: 4px;
+  }
+  .lang-menu {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 5px;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  .lang-menu img {
+    width: 30px;
+    border-radius: 4px;
+    transition: transform 0.2s;
+  }
+  .lang-menu img:hover {
+    transform: scale(1.1);
+  }
+  .lang-open .lang-menu {
+    display: flex;
+  }
+</style>
+<script>
+(function () {
+  const LANGS = {
+    en: "https://flagcdn.com/w40/gb.png",
+    de: "https://flagcdn.com/w40/de.png",
+    fr: "https://flagcdn.com/w40/fr.png",
+    es: "https://flagcdn.com/w40/es.png"
+  };
+
+  const container = document.getElementById("lang-chose");
+  let currentLang = sessionStorage.getItem("lang") || Object.keys(LANGS)[0];
+  const current = document.createElement("div");
+  current.className = "lang-current";
+  const menu = document.createElement("div");
+  menu.className = "lang-menu";
+  function render() {
+    current.innerHTML = `<img src="${LANGS[currentLang]}" alt="${currentLang}">`;
+    menu.innerHTML = "";
+    Object.keys(LANGS).forEach(lang => {
+      if (lang === currentLang) return;
+      const img = document.createElement("img");
+      img.src = LANGS[lang];
+      img.alt = lang;
+      img.onclick = (e) => {
+        e.stopPropagation();
+        currentLang = lang;
+        sessionStorage.setItem("lang", lang);
+        render();
+        container.classList.remove("lang-open");
+      };
+      menu.appendChild(img);
+    });
+  }
+  container.addEventListener("click", () => {
+    container.classList.toggle("lang-open");
+  });
+  document.addEventListener("click", (e) => {
+    if (!container.contains(e.target)) {
+      container.classList.remove("lang-open");
+    }
+  });
+
+  container.appendChild(current);
+  container.appendChild(menu);
+
+  render();
+})();
+</script>
+<!--##########-->
             </ul>
