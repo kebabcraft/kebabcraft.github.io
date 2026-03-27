@@ -1,272 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KebabCraftMC</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="theme-toggle.js" defer></script>
-    <link rel="shortcut icon" href="./src/img/favicon.webp" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KebabCraftMC</title>
+<link rel="stylesheet" href="./styles.css">
+<script src="theme-toggle.js" defer></script>
+
+<style>
+.overlay {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.7);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    pointer-events:none;
+    transition: opacity 0.3s ease;
+    z-index:999;
+}
+.overlay.show { opacity:1; pointer-events:auto; }
+
+.overlay-content {
+    background:#1e1e1e;
+    padding:20px;
+    border-radius:10px;
+    display:flex;
+    gap:40px;
+    max-width:700px;
+    width:90%;
+    color:white;
+    position:relative;
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+}
+.overlay.show .overlay-content { transform: scale(1); }
+
+.overlay-left img { width:120px; }
+
+#close-overlay {
+    position:absolute;
+    top:10px;
+    right:10px;
+    cursor:pointer;
+}
+#overlay-socials a {
+    display:block;
+    margin-top:5px;
+    color:#00acee;
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="fullhomething">
-                <a href="index.html">
-                    <img class="home" src="./src/img/favicon.webp" alt="KebabCraftMC logo">
-                    <img class="home-image-two" src="./src/img/kebabcrafttext.png" alt="KebabCraftMC">
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><button class="theme-toggle" onclick="toggleTheme()"><img src="./src/img/lightdarkicon.png" alt="Light/dark mode"></button></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./join.html">Join</a></li>
-                <li><a href="./rules.html">Rules</a></li>
-                <li><a href="./store.html">Store</a></li>
-                <li><a href="./updates.html">Updates</a></li>
-                <li><a href="./socials.html">Socials</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="hero">
-            <canvas id="sky"></canvas>
-            <div class="hero-content">
-                <h1><img src="./src/img/kebabcrafttext.png" alt="KebabCraftMC"></h1>
-                <h1>About KebabcraftMC.</h1>
-            </div>
-        </section>
+<div id="team-container"></div>
 
-        <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
-        <script src="./panorama.js"></script>
+<!-- Overlay -->
+<div id="overlay" class="overlay">
+    <div class="overlay-content">
+        <button id="close-overlay">✖</button>
 
-        <section>
-            <p class="dev-cards">KebabCraftMC is a unique Earth Minecraft server where players can claim real-world locations, build cities, trade resources, and engage in politics and war!</p>
-        </section>
+        <div class="overlay-left">
+            <img id="overlay-skin">
+            <h2 id="overlay-name"></h2>
+            <p id="overlay-rank"></p>
+        </div>
 
-        <section class="dev-team">
-            <h2>Meet the Team</h2>
-            <div id="team-container" class="dev-cards">
-            </div>
-        </section>
-
-        <script>
-        const defaultSkin = "https://api.mineatar.io/body/full/aab62631839344588fee11c4414cee48?scale=16";
-        const teamData = {
-            "Owners": [
-                { "name": "Stormtrooper1948", "rank": "Owner", "skin": "https://api.mineatar.io/body/full/d86f01025aaa48609a4a51c79bb3d56a?scale=16" },
-                { "name": "aGalacticTrooper", "rank": "Co-Owner", "skin": "https://api.mineatar.io/body/full/2ace8091-3e7a-4895-ba04-c78bbda0034c?scale=16"}
-            ],
-            "Honorable Mentions": [
-                { "name": "Gorm", "rank": "Developer and Sponsor", "skin": "https://api.mineatar.io/body/full/370d475d-8a9d-4403-9615-3cf9639bf1dd?scale=16"}
-            ],
-            "Development": [
-                { "name": "ThePhoenix49", "rank": "Head Dev", "skin": "https://api.mineatar.io/body/full/b355822753bc4c8590fa157c60442bcc?scale=16" },
-                { "name": "CyberH3ad", "rank": "Developer", "skin": "https://api.mineatar.io/body/full/4b6e8b01-6db1-4de7-b08f-ea6e30a8f8ce?scale=16" },                
-                { "name": "Pope l0playz", "rank": "Developer", "skin": "https://api.mineatar.io/body/full/c0a42c3b-bcde-4fdd-9a7f-fe684ceadcbd?scale=16"},                
-                { "name": "SCIRY_", "rank": "Developer", "skin": "https://api.mineatar.io/body/full/d2a92343-20fd-493b-8b58-017c6e64c087?scale=16"},                
-                { "name": "TLine dev", "rank": "Developer", "skin": "https://api.mineatar.io/body/full/990f8f7a-05b9-4bb7-af86-5167cb20f117?scale=16"},                
-                { "name": "no name", "rank": "Web-Developer", "skin": "https://api.mineatar.io/body/full/4d6263ab-9579-4666-b13d-83cc9644f783?scale=16"},                
-                { "name": "Azo", "rank": "Trial Dev", "skin": "https://api.mineatar.io/body/full/de858727-881e-4fe5-8a4b-1a1cc42e83f3?scale=16"},                
-                { "name": "Livmellow", "rank": "Trial Dev", "skin": "https://api.mineatar.io/body/full/349d9a22-7b03-458c-96c4-d900f520eab6?scale=16"}
-            ],
-            "Administration": [
-                { "name": "Bigdogchampski", "rank": "Head Admin", "skin": "https://api.mineatar.io/body/full/9e017a0d-84bb-4ba3-bda7-ad3973c04803?scale=16"},
-                { "name": "Hippo", "rank": "Staff Manager", "skin": "https://api.mineatar.io/body/full/cbc2d9dd53bd4796895d73feee249ae2?scale=16" },                
-                { "name": "baddestaliveee", "rank": "Admin", "skin": "https://api.mineatar.io/body/full/bf53fe01-c359-4a49-9245-73da05e7d1a8?scale=16"},                
-                { "name": "basharion", "rank": "Admin", "skin": "https://api.mineatar.io/body/full/dc0745f6-8aaf-464a-b105-db4746944adf?scale=16"},                
-                { "name": "PatrickTNT", "rank": "Admin", "skin": "https://api.mineatar.io/body/full/666b1ca7-fc0a-4e31-ba5a-bd07f48a7003?scale=16"},                
-                { "name": "dreammycreamyx", "rank": "Admin", "skin": "https://api.mineatar.io/body/full/c4de7848-6bfa-4257-93f8-1fab2a82902f?scale=16"}
-            ],
-            "Moderation": [
-                { "name": "Doctro_k", "rank": "Head-Mod", "skin": "https://api.mineatar.io/body/full/51f691da-e72b-4bd3-aedf-bb3bd6024c8c?scale=16"},                
-                { "name": "Anführer Carterprogamer", "rank": "Moderator", "skin": "https://api.mineatar.io/body/full/44e46f69-2647-4d36-b3f6-e71678fb42b3?scale=16"},                
-                { "name": "Arei", "rank": "Moderator", "skin": "https://api.mineatar.io/body/full/962facd9-1eb4-486a-9f99-f5b71077c82e?scale=16"},                
-                { "name": "FootballFan9973", "rank": "Moderator", "skin": "https://api.mineatar.io/body/full/a3dc5096-7d53-41c0-add7-e25587c050a9?scale=16"}
-            ],
-            "Builder": [
-                { "name": "Sinine", "rank": "Head Builder", "skin": "https://api.mineatar.io/body/full/f4f50bda-6ae8-4696-97dd-0ad6fecf0054?scale=16"},                
-                { "name": "cabybara", "rank": "Builder", "skin": "https://api.mineatar.io/body/full/1f7434a8-be97-47c3-af1d-5439e9a269e8?scale=16"}
-            ]
-        };
-
-        // Add card data for overlay
-        for (const category of Object.values(teamData)) {
-            category.forEach(member => {
-                member.card = {
-                    ldis: member.rank,
-                    sm: [
-                        ["Discord", "https://kebabcraft.github.io/socials"]
-                    ]
-                };
-            });
-        }
-
-        const container = document.getElementById('team-container');
-
-        for (const [category, members] of Object.entries(teamData)) {
-            const catDiv = document.createElement('div');
-            const h2Class = category === 'Honorable Mentions' ? 'honorable-mentions' : '';
-            catDiv.innerHTML = `<h2 class="${h2Class}">${category}</h2><ul></ul>`;
-            const ul = catDiv.querySelector('ul');
-
-            members.forEach(member => {
-                const li = document.createElement('li');
-                const skinUrl = member.skin || defaultSkin; 
-                li.innerHTML = `
-                    <div class="dev-card">
-                        <img class="skin" src="${skinUrl}" alt="${member.name}">
-                        <h3>${member.name}</h3>
-                        <p class="rank">${member.rank}</p>
-                    </div>
-                `;
-
-                // Click to show overlay
-                li.addEventListener("click", () => {
-                    openOverlay(member, skinUrl);
-                });
-
-                ul.appendChild(li);
-            });
-
-            container.appendChild(catDiv);
-        }
-
-        // Overlay functions
-        const overlay = document.getElementById("overlay");
-        const overlayContent = overlay.querySelector(".overlay-content");
-        const overlaySkin = document.getElementById("overlay-skin");
-        const overlayName = document.getElementById("overlay-name");
-        const overlayRank = document.getElementById("overlay-rank");
-        const overlayDescription = document.getElementById("overlay-description");
-        const overlaySocials = document.getElementById("overlay-socials");
-        const closeOverlayBtn = document.getElementById("close-overlay");
-
-        function openOverlay(member, skinUrl) {
-            overlaySkin.src = skinUrl;
-            overlayName.textContent = member.name;
-            overlayRank.textContent = member.rank;
-            overlayDescription.textContent = member.card.ldis;
-
-            overlaySocials.innerHTML = "";
-            member.card.sm.forEach(social => {
-                const a = document.createElement("a");
-                a.href = social[1];
-                a.textContent = social[0];
-                a.target = "_blank";
-                overlaySocials.appendChild(a);
-            });
-
-            overlay.classList.add("show");
-        }
-
-        function closeOverlay() {
-            overlay.classList.remove("show");
-        }
-
-        // Close overlay on button
-        closeOverlayBtn.addEventListener("click", closeOverlay);
-
-        // Close overlay when clicking outside content
-        overlay.addEventListener("click", (e) => {
-            if (!overlayContent.contains(e.target)) {
-                closeOverlay();
-            }
-        });
-
-        // Close overlay on ESC key
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape") closeOverlay();
-        });
-        </script>
-    </main>
-
-    <!-- Overlay HTML -->
-    <div id="overlay" class="overlay hidden">
-        <div class="overlay-content">
-            <button id="close-overlay">✖</button>
-            <div class="overlay-left">
-                <img id="overlay-skin" src="" alt="">
-                <h2 id="overlay-name"></h2>
-                <p id="overlay-rank"></p>
-            </div>
-            <div class="overlay-right">
-                <p id="overlay-description"></p>
-                <div id="overlay-socials"></div>
-            </div>
+        <div class="overlay-right">
+            <p id="overlay-description"></p>
+            <div id="overlay-socials"></div>
         </div>
     </div>
+</div>
 
-    <style>
-    /* Overlay styles with smooth animation */
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.7);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 999;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
-    }
+<script>
+const defaultSkin = "https://api.mineatar.io/body/full/aab62631839344588fee11c4414cee48?scale=16";
 
-    .overlay.show {
-        opacity: 1;
-        pointer-events: auto;
-    }
+const teamData = {
+"Owners":[
+{ name:"Stormtrooper1948",rank:"Owner",skin:"https://api.mineatar.io/body/full/d86f01025aaa48609a4a51c79bb3d56a?scale=16",
+card:{ldis:"Owner",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"aGalacticTrooper",rank:"Co-Owner",skin:"https://api.mineatar.io/body/full/2ace8091-3e7a-4895-ba04-c78bbda0034c?scale=16",
+card:{ldis:"Co-Owner",sm:[["Discord","https://kebabcraft.github.io/socials"]]}}
+],
 
-    .overlay-content {
-        background: #1e1e1e;
-        padding: 20px;
-        border-radius: 10px;
-        display: flex;
-        gap: 40px;
-        max-width: 700px;
-        width: 90%;
-        color: white;
-        position: relative;
-        transform: scale(0.7);
-        transition: transform 0.3s ease;
-    }
+"Honorable Mentions":[
+{ name:"Gorm",rank:"Developer and Sponsor",skin:"https://api.mineatar.io/body/full/370d475d-8a9d-4403-9615-3cf9639bf1dd?scale=16",
+card:{ldis:"Developer and Sponsor",sm:[["Discord","https://kebabcraft.github.io/socials"]]}}
+],
 
-    .overlay.show .overlay-content {
-        transform: scale(1);
-    }
+"Development":[
+{ name:"ThePhoenix49",rank:"Head Dev",skin:"https://api.mineatar.io/body/full/b355822753bc4c8590fa157c60442bcc?scale=16",
+card:{ldis:"Head Dev",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"CyberH3ad",rank:"Developer",skin:"https://api.mineatar.io/body/full/4b6e8b01-6db1-4de7-b08f-ea6e30a8f8ce?scale=16",
+card:{ldis:"Developer",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"Pope l0playz",rank:"Developer",skin:"https://api.mineatar.io/body/full/c0a42c3b-bcde-4fdd-9a7f-fe684ceadcbd?scale=16",
+card:{ldis:"Developer",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"SCIRY_",rank:"Developer",skin:"https://api.mineatar.io/body/full/d2a92343-20fd-493b-8b58-017c6e64c087?scale=16",
+card:{ldis:"Developer",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"TLine dev",rank:"Developer",skin:"https://api.mineatar.io/body/full/990f8f7a-05b9-4bb7-af86-5167cb20f117?scale=16",
+card:{ldis:"Developer",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"no name",rank:"Web-Developer",skin:"https://api.mineatar.io/body/full/4d6263ab-9579-4666-b13d-83cc9644f783?scale=16",
+card:{ldis:"Web-Developer",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"Azo",rank:"Trial Dev",skin:"https://api.mineatar.io/body/full/de858727-881e-4fe5-8a4b-1a1cc42e83f3?scale=16",
+card:{ldis:"Trial Dev",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"Livmellow",rank:"Trial Dev",skin:"https://api.mineatar.io/body/full/349d9a22-7b03-458c-96c4-d900f520eab6?scale=16",
+card:{ldis:"Trial Dev",sm:[["Discord","https://kebabcraft.github.io/socials"]]}}
+],
 
-    .overlay-left img {
-        width: 120px;
-    }
+"Administration":[
+{ name:"Bigdogchampski",rank:"Head Admin",skin:"https://api.mineatar.io/body/full/9e017a0d-84bb-4ba3-bda7-ad3973c04803?scale=16",
+card:{ldis:"Head Admin",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"Hippo",rank:"Staff Manager",skin:"https://api.mineatar.io/body/full/cbc2d9dd53bd4796895d73feee249ae2?scale=16",
+card:{ldis:"Staff Manager",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"baddestaliveee",rank:"Admin",skin:"https://api.mineatar.io/body/full/bf53fe01-c359-4a49-9245-73da05e7d1a8?scale=16",
+card:{ldis:"Admin",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"basharion",rank:"Admin",skin:"https://api.mineatar.io/body/full/dc0745f6-8aaf-464a-b105-db4746944adf?scale=16",
+card:{ldis:"Admin",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"PatrickTNT",rank:"Admin",skin:"https://api.mineatar.io/body/full/666b1ca7-fc0a-4e31-ba5a-bd07f48a7003?scale=16",
+card:{ldis:"Admin",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"dreammycreamyx",rank:"Admin",skin:"https://api.mineatar.io/body/full/c4de7848-6bfa-4257-93f8-1fab2a82902f?scale=16",
+card:{ldis:"Admin",sm:[["Discord","https://kebabcraft.github.io/socials"]]}}
+],
 
-    #close-overlay {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-    }
+"Moderation":[
+{ name:"Doctro_k",rank:"Head-Mod",skin:"https://api.mineatar.io/body/full/51f691da-e72b-4bd3-aedf-bb3bd6024c8c?scale=16",
+card:{ldis:"Head-Mod",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"Anführer Carterprogamer",rank:"Moderator",skin:"https://api.mineatar.io/body/full/44e46f69-2647-4d36-b3f6-e71678fb42b3?scale=16",
+card:{ldis:"Moderator",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"Arei",rank:"Moderator",skin:"https://api.mineatar.io/body/full/962facd9-1eb4-486a-9f99-f5b71077c82e?scale=16",
+card:{ldis:"Moderator",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"FootballFan9973",rank:"Moderator",skin:"https://api.mineatar.io/body/full/a3dc5096-7d53-41c0-add7-e25587c050a9?scale=16",
+card:{ldis:"Moderator",sm:[["Discord","https://kebabcraft.github.io/socials"]]}}
+],
 
-    #overlay-socials a {
-        display: block;
-        margin-top: 5px;
-        color: #00acee;
-        text-decoration: none;
-    }
+"Builder":[
+{ name:"Sinine",rank:"Head Builder",skin:"https://api.mineatar.io/body/full/f4f50bda-6ae8-4696-97dd-0ad6fecf0054?scale=16",
+card:{ldis:"Head Builder",sm:[["Discord","https://kebabcraft.github.io/socials"]]}},
+{ name:"cabybara",rank:"Builder",skin:"https://api.mineatar.io/body/full/1f7434a8-be97-47c3-af1d-5439e9a269e8?scale=16",
+card:{ldis:"Builder",sm:[["Discord","https://kebabcraft.github.io/socials"]]}}
+]
+};
 
-    #overlay-socials a:hover {
-        text-decoration: underline;
-    }
-    </style>
+// === LOGIC ===
+const container=document.getElementById("team-container");
+const overlay=document.getElementById("overlay");
+const overlayContent=overlay.querySelector(".overlay-content");
 
-    <footer>
-        <p>&copy; 2025 KebabCraftMC. All rights reserved.</p>
-    </footer>
+function openOverlay(member){
+    document.getElementById("overlay-skin").src=member.skin||defaultSkin;
+    document.getElementById("overlay-name").textContent=member.name;
+    document.getElementById("overlay-rank").textContent=member.rank;
+    document.getElementById("overlay-description").textContent=member.card.ldis;
+
+    const socials=document.getElementById("overlay-socials");
+    socials.innerHTML="";
+    member.card.sm.forEach(s=>{
+        const a=document.createElement("a");
+        a.href=s[1]; a.textContent=s[0]; a.target="_blank";
+        socials.appendChild(a);
+    });
+
+    overlay.classList.add("show");
+}
+
+function closeOverlay(){ overlay.classList.remove("show"); }
+
+document.getElementById("close-overlay").onclick=closeOverlay;
+overlay.onclick=(e)=>{ if(!overlayContent.contains(e.target)) closeOverlay(); };
+document.onkeydown=(e)=>{ if(e.key==="Escape") closeOverlay(); };
+
+// render
+for(const [cat, members] of Object.entries(teamData)){
+    const div=document.createElement("div");
+    div.innerHTML=`<h2>${cat}</h2><ul></ul>`;
+    const ul=div.querySelector("ul");
+
+    members.forEach(m=>{
+        const li=document.createElement("li");
+        li.innerHTML=`<div class="dev-card">
+            <img src="${m.skin||defaultSkin}">
+            <h3>${m.name}</h3>
+            <p>${m.rank}</p>
+        </div>`;
+        li.onclick=()=>openOverlay(m);
+        ul.appendChild(li);
+    });
+
+    container.appendChild(div);
+}
+</script>
+
 </body>
 </html>
