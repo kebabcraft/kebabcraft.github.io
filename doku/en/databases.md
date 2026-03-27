@@ -25,3 +25,13 @@
       - "wood"    - str  - wich wood
       - "pic"     - str+ - (+:url->png) image of the drink
 ```
+
+# staff
+- about.html\script
+ˋˋˋ
+- <k>        - lst   - <k> name of the category
+  - ?        - jso   - a card
+    - "name" - str   - the name of the player
+    - "rank" - str   - the rank of the player
+    - "skin" - str+) - (+:url)(->?skin) the link to the player model of the player
+ˋˋˋ
