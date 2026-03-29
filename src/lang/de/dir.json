@@ -1,6 +1,13 @@
 {
-    "supported": ["index.html"],
+    "supported": ["index.html", ""],
     "index.html": [
-        ["top", false, "src/lang/de/assets/top.html"]
+        ["top", false, "src/lang/de/assets/top.html"],
+        ["header", false, "src/lang/en/assets/header.html"],
+        ["code", false, "src/lang/assets/flags.js"]
+    ],
+    "": [
+        ["top", false, "src/lang/de/assets/top.html"],
+        ["header", false, "src/lang/en/assets/header.html"],
+        ["code", false, "src/lang/assets/flags.js"]
     ]
 }
