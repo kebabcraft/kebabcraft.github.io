@@ -3,11 +3,13 @@
     "index.html": [
         ["top", false, "src/lang/de/assets/top.html"],
         ["header", false, "src/lang/en/assets/header.html"],
-        ["code", false, "src/lang/assets/flags.js"]
+        ["code", false, "src/lang/assets/flags.js"],
+        ["main", false, "src/lang/de/assets/index.html"]
     ],
     "": [
         ["top", false, "src/lang/de/assets/top.html"],
         ["header", false, "src/lang/en/assets/header.html"],
-        ["code", false, "src/lang/assets/flags.js"]
+        ["code", false, "src/lang/assets/flags.js"],
+        ["main", false, "src/lang/de/assets/index.html"]
     ]
 }
