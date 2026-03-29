@@ -37,7 +37,6 @@ async function main() {
         document.getElementById(a[0]).innerHTML = translation;
       }
     }
-    });
   } else {
     console.log("(lang controler) diese Site wird in der gewünschten Sprache nicht unterstützt.");
   }
