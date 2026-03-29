@@ -1,9 +1,7 @@
 (function () {
   const LANGS = {
     en: "https://flagcdn.com/w40/gb.png",
-    de: "https://flagcdn.com/w40/de.png",
-    fr: "https://flagcdn.com/w40/fr.png",
-    es: "https://flagcdn.com/w40/es.png"
+    de: "https://flagcdn.com/w40/de.png"
   };
 
   const container = document.getElementById("lang-chose");
