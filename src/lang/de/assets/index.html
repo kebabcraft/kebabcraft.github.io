@@ -1,0 +1,64 @@
+    <section class="hero">
+  <canvas id="sky"></canvas>
+  <div class="hero-content">
+    <h1><img src="./src/img/kebabcrafttext.png" alt="KebabCraftMC"></h1>
+    <h1>Die ultimative Minecraft-Earth-SMP Erfahrung.</h1>
+    <a href="join.html" class="btn">jetzt beitreten</a>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="./panorama.js"></script>
+
+        <section class="features">
+            <h2>Warum solltest du auf KebabCraftMC spielen?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🌍 echte Weltkarte</h3>
+                    <p>Erkunde eine Weltkarte im Maßstab 1:326 mit eigenen Biomen.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚒️ Claime & Baue</h3>
+                    <p>Claime Land, gründe Dörfer und baue dein Imperium auf.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🤝 Aktive Community</h3>
+                    <p>Freundliche Spieler, Staff-Events und Discord-Server.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ip-section">
+            <h2>Server IP:</h2>
+            <code onclick="copyToClipboard(this)">play.kebabcraft.net</code>
+            <h2>Bedrock Port:</h2>
+            <code onclick="copyToClipboard(this)">19132</code>
+            <script>
+            function copyToClipboard(element) {
+            const text = element.textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                    alert("Kopiert: " + text);
+            }).catch(err => {
+            console.error('Konnte nicht kopiert werden: ', err);
+            });
+            }
+            </script>
+
+            <p>Version: 1.21.11+</p>
+        </section>
+        <section class="updates">
+            <ul class="update-grid">
+                <li class="update-card">
+                    <h3>Du brauchst Hilfe?</h3>
+                    <p><a class="btn" href="help.html">finde sie hier</a></p>
+                </li>
+            </ul>
+        </section>
+        <section class="updates">
+            <ul class="update-grid">
+                <li class="update-card">
+                    <a href="http://play.kebabcraft.net:49827"><h1>Server Map</h1></a>
+                    <iframe class="earthmap" src="https://play.kebabcraft.net:49827" frameborder="0"></iframe>
+                </li>
+            </ul>
+        </section>
