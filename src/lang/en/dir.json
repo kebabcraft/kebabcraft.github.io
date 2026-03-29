@@ -1,9 +1,11 @@
 {
     "supported": ["index.html", ""],
     "index.html": [
-        ["top", false, "src/lang/en/assets/top.html"]
+        ["top", false, "src/lang/en/assets/top.html"],
+        ["header", false, "src/lang/en/assets/header.html"]
     ],
     "": [
-        ["top", false, "src/lang/en/assets/top.html"]
+        ["top", false, "src/lang/en/assets/top.html"],
+        ["header", false, "src/lang/en/assets/header.html"]
     ]
 }
