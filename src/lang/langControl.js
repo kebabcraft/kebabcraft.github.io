@@ -37,13 +37,6 @@ async function main() {
         document.getElementById(a[0]).innerHTML = translation;
       }
     }
-    const links = document.querySelectorAll("a");
-    links.forEach(link => {
-      if (link.href) {
-        const url = new URL(link.href);
-        url.searchParams.set("lang", lang);
-        link.href = url.toString();
-      }
     });
   } else {
     console.log("(lang controler) diese Site wird in der gewünschten Sprache nicht unterstützt.");
