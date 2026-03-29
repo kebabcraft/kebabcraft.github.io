@@ -24,6 +24,7 @@
         sessionStorage.setItem("lang", lang);
         render();
         container.classList.remove("lang-open");
+        location.reload();
       };
       menu.appendChild(img);
     });
