@@ -1,4 +1,4 @@
-    <section class="hero">
+<section class="hero">
   <canvas id="sky"></canvas>
   <div class="hero-content">
     <h1><img src="./src/img/kebabcrafttext.png" alt="KebabCraftMC"></h1>
@@ -10,66 +10,62 @@
 <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
 <script src="./panorama.js"></script>
 
-  <!-- Your HTML content -->
-  <section class="features">
-    <div id="step-display" class="feature-card"></div>
-  </section>
+<section class="features">
+  <div id="step-display" class="feature-card"></div>
+</section>
 
-  <!-- Place script here, AFTER #step-display is loaded -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const steps = [
+  const stepsde = [
     { icon: "🎮", title: "Step 1", text: "Launch Minecraft (1.21.11 or newer)" },
     { icon: "🌐", title: "Step 2", text: "Go to Multiplayer > Add Server" },
     { icon: "📝", title: "Step 3", text: "Enter IP: play.kebabcraft.net" },
     { icon: "🚀", title: "Step 4", text: "Click Join and start playing!" }
   ];
 
-  let index = 0;
-  const container = document.getElementById("step-display");
+  let indexde = 0;
+  const containerde = document.getElementById("step-display");
 
-  function updateStep() {
-    const step = steps[index];
-    index = (index + 1) % steps.length;
+  function updateStepde() {
+    const stepde = stepsde[indexde];
+    indexde = (indexde + 1) % stepsde.length;
 
-    const incoming = document.createElement("div");
-    incoming.className = "feature-card slide-in";
-    incoming.innerHTML = `
-      <h3>${step.icon} ${step.title}</h3>
-      <p>${step.text}</p>
+    const incomingde = document.createElement("div");
+    incomingde.className = "feature-card slide-in";
+    incomingde.innerHTML = `
+      <h3>${stepde.icon} ${stepde.title}</h3>
+      <p>${stepde.text}</p>
     `;
 
-    const old = container.querySelector(".feature-card");
+    const oldde = containerde.querySelector(".feature-card");
 
-    if (old) {
-      old.classList.remove("slide-in");
-      old.classList.add("slide-out");
+    if (oldde) {
+      oldde.classList.remove("slide-in");
+      oldde.classList.add("slide-out");
 
-      old.addEventListener("animationend", () => {
-        if (old.parentNode === container) {
-          container.removeChild(old);
+      oldde.addEventListener("animationend", () => {
+        if (oldde.parentNode === containerde) {
+          containerde.removeChild(oldde);
         }
       }, { once: true });
     }
 
-    container.appendChild(incoming);
+    containerde.appendChild(incomingde);
   }
 
-  updateStep();
-  setInterval(updateStep, 3000);
+  updateStepde();
+  setInterval(updateStepde, 3000);
 });
 
-// Copy function getrennt (sauber außerhalb)
-function copyToClipboard(element) {
-  const text = element.textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    alert("Copied: " + text);
-  }).catch(err => {
-    console.error('Failed to copy: ', err);
+
+function copyToClipboardde(elementde) {
+  const textde = elementde.textContent;
+  navigator.clipboard.writeText(textde).then(() => {
+    alert("Copied: " + textde);
+  }).catch(errde => {
+    console.error('Failed to copy: ', errde);
   });
 }
+</script>
 
-            </script>
-
-            <p>Version: 1.21.11+</p>
-      </section>
+<p>Version: 1.21.11+</p>
