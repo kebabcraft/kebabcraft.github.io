@@ -15,56 +15,56 @@
 </section>
 
 <script>
-const stepsde = [
-  { icon: "🎮", title: "Step 1", text: "Launch Minecraft (1.21.11 or newer)" },
-  { icon: "🌐", title: "Step 2", text: "Go to Multiplayer > Add Server" },
-  { icon: "📝", title: "Step 3", text: "Enter IP: play.kebabcraft.net" },
-  { icon: "🚀", title: "Step 4", text: "Click Join and start playing!" }
-];
+(function () {
+  const stepsde = [
+    { icon: "🎮", title: "Step 1", text: "Launch Minecraft (1.21.11 or newer)" },
+    { icon: "🌐", title: "Step 2", text: "Go to Multiplayer > Add Server" },
+    { icon: "📝", title: "Step 3", text: "Enter IP: play.kebabcraft.net" },
+    { icon: "🚀", title: "Step 4", text: "Click Join and start playing!" }
+  ];
 
-let indexde = 0;
-const containerde = document.getElementById("step-display");
+  let indexde = 0;
 
-function updateStepde() {
-  const stepde = stepsde[indexde];
-  indexde = (indexde + 1) % stepsde.length;
+  function initSteps() {
+    const containerde = document.getElementById("step-display");
 
-  const incomingde = document.createElement("div");
-  incomingde.className = "feature-card slide-in";
-  incomingde.innerHTML = `
-    <h3>${stepde.icon} ${stepde.title}</h3>
-    <p>${stepde.text}</p>
-  `;
+    if (!containerde) return; 
 
-  const oldde = containerde.querySelector(".feature-card");
+    function updateStepde() {
+      const stepde = stepsde[indexde];
+      indexde = (indexde + 1) % stepsde.length;
 
-  if (oldde) {
-    oldde.classList.remove("slide-in");
-    oldde.classList.add("slide-out");
+      const incomingde = document.createElement("div");
+      incomingde.className = "feature-card slide-in";
+      incomingde.innerHTML = `
+        <h3>${stepde.icon} ${stepde.title}</h3>
+        <p>${stepde.text}</p>
+      `;
 
-    oldde.addEventListener("animationend", () => {
-      if (oldde.parentNode === containerde) {
-        containerde.removeChild(oldde);
+      const oldde = containerde.querySelector(".feature-card");
+
+      if (oldde) {
+        oldde.classList.remove("slide-in");
+        oldde.classList.add("slide-out");
+
+        oldde.addEventListener("animationend", () => {
+          if (oldde.parentNode === containerde) {
+            containerde.removeChild(oldde);
+          }
+        }, { once: true });
       }
-    }, { once: true });
+
+      containerde.appendChild(incomingde);
+    }
+
+    updateStepde();
+    setInterval(updateStepde, 3000);
   }
 
-  containerde.appendChild(incomingde);
-}
 
-if (containerde) {
-  updateStepde();
-  setInterval(updateStepde, 3000);
-}
-
-function copyToClipboardde(elementde) {
-  const textde = elementde.textContent;
-  navigator.clipboard.writeText(textde).then(() => {
-    alert("Copied: " + textde);
-  }).catch(errde => {
-    console.error('Failed to copy: ', errde);
-  });
-}
+  initSteps();
+  setTimeout(initSteps, 100);
+})();
 </script>
 
 <p>Version: 1.21.11+</p>
