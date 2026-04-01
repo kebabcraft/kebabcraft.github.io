@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Load your panorama cube
   const loader = new THREE.CubeTextureLoader();
-  loader.setPath('./src/img/panorama/jok/26');
+  loader.setPath('./src/img/panorama/jok/26/');
   const texture = loader.load([
     'panorama_1.png', // +X (right)
     'panorama_3.png', // -X (left)
