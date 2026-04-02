@@ -29,6 +29,11 @@
       "top-txt": "Improved chopper.",
       "sub-txt": "Breaks more logs vertically.",
       "pic": "./src/img/recipes/lumber_axe.png"
+    },{
+      "name": "Oven Pickxe",
+      "top-txt": "A pickaxe whia a oven.",
+      "sub-txt": "May the oven be with you?",
+      "pic": "./src/img/recipes/oven_pickaxe.png"
     }
   ],
   "Armor": [
