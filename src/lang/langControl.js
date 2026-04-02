@@ -13,32 +13,43 @@ const languages = {
 
 const params = new URLSearchParams(window.location.search);
 let lang = params.get("lang");
+
 if (!lang) {
   lang = sessionStorage.getItem("lang");
 }
 if (!lang || !languages[lang]) {
   lang = "en";
 }
+
 sessionStorage.setItem("lang", lang);
+
 async function main() {
   console.log("Sprache:", lang);
+
   const data = await loadData(languages[lang], true);
-  const site = window.location.pathname.split("/").pop();
+
+  // Immer so tun, als wäre die Seite "main"
+  const site = "main";
+
   if (data.supported.includes(site)) {
-    let laeng = data[site].length;
-    for (let i = 0; i < laeng; i++) {
-      const a = data[site][i];
+    const entries = data[site];
+    for (let i = 0; i < entries.length; i++) {
+      const a = entries[i];
       let translation;
+
+      const el = document.getElementById(a[0]);
+      if (!el) continue; // Sicherstellen, dass das Element existiert
+
       if (a[1]) {
         translation = await loadData(a[2][0], true);
-        document.getElementById(a[0]).innerHTML = translation[a[2][1]];
+        el.innerHTML = translation[a[2][1]];
       } else {
         translation = await loadData(a[2], false);
-        document.getElementById(a[0]).innerHTML = translation;
+        el.innerHTML = translation;
       }
     }
   } else {
-    console.log("(lang controler) diese Site wird in der gewünschten Sprache nicht unterstützt.");
+    console.log("(lang controller) 'main' wird in der gewählten Sprache nicht unterstützt.");
   }
 }
 
