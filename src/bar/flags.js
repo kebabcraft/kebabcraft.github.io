@@ -6,20 +6,22 @@
 
   const container = document.getElementById("lang-chose");
 
-  // Sprachwahl aus URL automatisch erkennen
-  let path = window.location.pathname;
-  let currentLang = "en"; // Standard
+  const path = window.location.pathname;
+  let currentLang;
 
+  // 1️⃣ Zuerst URL prüfen
   if (path.startsWith("/de")) {
     currentLang = "de";
   } else {
-    currentLang = "en";
+    currentLang = "en"; // Standard
   }
 
-  // SessionStorage überschreibt URL, falls vorhanden
-  const storedLang = sessionStorage.getItem("lang");
-  if (storedLang) {
-    currentLang = storedLang;
+  // 2️⃣ SessionStorage nur nutzen, wenn URL keinen Sprachcode enthält
+  if (!path.startsWith("/de")) {
+    const storedLang = sessionStorage.getItem("lang");
+    if (storedLang && LANGS[storedLang]) {
+      currentLang = storedLang;
+    }
   }
 
   const current = document.createElement("div");
