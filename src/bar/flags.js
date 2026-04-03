@@ -6,23 +6,9 @@
 
   const container = document.getElementById("lang-chose");
 
+  // Sprache nur anhand der URL erkennen
   const path = window.location.pathname;
-  let currentLang;
-
-  // 1️⃣ Zuerst URL prüfen
-  if (path.startsWith("/de")) {
-    currentLang = "de";
-  } else {
-    currentLang = "en"; // Standard
-  }
-
-  // 2️⃣ SessionStorage nur nutzen, wenn URL keinen Sprachcode enthält
-  if (!path.startsWith("/de")) {
-    const storedLang = sessionStorage.getItem("lang");
-    if (storedLang && LANGS[storedLang]) {
-      currentLang = storedLang;
-    }
-  }
+  let currentLang = path.startsWith("/de") ? "de" : "en";
 
   const current = document.createElement("div");
   current.className = "lang-current";
@@ -44,22 +30,19 @@
       img.onclick = (e) => {
         e.stopPropagation();
 
-        currentLang = lang;
-        sessionStorage.setItem("lang", lang);
-
-        let path = window.location.pathname;
+        let newPath = window.location.pathname;
         const search = window.location.search;
         const hash = window.location.hash;
 
         if (lang === "de") {
-          if (!path.startsWith("/de")) {
-            path = "/de" + path;
+          if (!newPath.startsWith("/de")) {
+            newPath = "/de" + newPath;
           }
         } else {
-          path = path.replace(/^\/de/, "");
+          newPath = newPath.replace(/^\/de/, "");
         }
 
-        window.location.href = path + search + hash;
+        window.location.href = newPath + search + hash;
       };
 
       menu.appendChild(img);
