@@ -5,7 +5,22 @@
   };
 
   const container = document.getElementById("lang-chose");
-  let currentLang = sessionStorage.getItem("lang") || Object.keys(LANGS)[0];
+
+  // Sprachwahl aus URL automatisch erkennen
+  let path = window.location.pathname;
+  let currentLang = "en"; // Standard
+
+  if (path.startsWith("/de")) {
+    currentLang = "de";
+  } else {
+    currentLang = "en";
+  }
+
+  // SessionStorage überschreibt URL, falls vorhanden
+  const storedLang = sessionStorage.getItem("lang");
+  if (storedLang) {
+    currentLang = storedLang;
+  }
 
   const current = document.createElement("div");
   current.className = "lang-current";
@@ -35,12 +50,10 @@
         const hash = window.location.hash;
 
         if (lang === "de") {
-          // /de hinzufügen, falls nicht vorhanden
           if (!path.startsWith("/de")) {
             path = "/de" + path;
           }
         } else {
-          // /de entfernen
           path = path.replace(/^\/de/, "");
         }
 
