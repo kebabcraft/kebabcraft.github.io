@@ -5,41 +5,29 @@ async function loadData(url, transform) {
   }
   return transform ? await response.json() : await response.text();
 }
-
 const languages = {
   en: "/src/lang/en/dir.json",
   de: "/src/lang/de/dir.json"
 };
+let lang;
+const pathParts = window.location.pathname.split("/").filter(Boolean);
 
-const params = new URLSearchParams(window.location.search);
-let lang = params.get("lang");
-
-if (!lang) {
-  lang = sessionStorage.getItem("lang");
-}
-if (!lang || !languages[lang]) {
+if (pathParts.length > 0 && languages[pathParts[0]]) {
+  lang = pathParts[0];
+} else {
   lang = "en";
 }
-
-sessionStorage.setItem("lang", lang);
-
 async function main() {
   console.log("Sprache:", lang);
-
   const data = await loadData(languages[lang], true);
-
-  // Immer so tun, als wäre die Seite "main"
   const site = "main";
-
   if (data.supported.includes(site)) {
     const entries = data[site];
     for (let i = 0; i < entries.length; i++) {
       const a = entries[i];
       let translation;
-
       const el = document.getElementById(a[0]);
-      if (!el) continue; // Sicherstellen, dass das Element existiert
-
+      if (!el) continue;
       if (a[1]) {
         translation = await loadData(a[2][0], true);
         el.innerHTML = translation[a[2][1]];
@@ -52,5 +40,4 @@ async function main() {
     console.log("(lang controller) 'main' wird in der gewählten Sprache nicht unterstützt.");
   }
 }
-
 main();
