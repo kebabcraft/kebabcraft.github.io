@@ -1,26 +1,26 @@
 {
-  "header": "<tr><th>Name</th><th>Time</th><th>Distill</th><th>Ageing</th><th>Wood</th><th>Image</th></tr>",
+  "header": "<tr><th>Name</th><th>Brau-Zeit</th><th>destiliert?</th><th>alter</th><th>Holz</th><th>Bild</th></tr>",
   "drinks": [
     {
       "name": "Bier",
       "time": "8min",
-      "distill": "no",
+      "distill": "nein",
       "ageing": "3 Jahre",
-      "wood": "any",
+      "wood": "jedes",
       "pic": ""
     },
     {
       "name": "Weizen-Bier",
       "time": "8min",
-      "distill": "no",
+      "distill": "nein",
       "ageing": "2 Jahre",
-      "wood": "any",
+      "wood": "jedes",
       "pic": ""
     },
     {
       "name": "dunkles Bier",
       "time": "8min",
-      "distill": "no",
+      "distill": "nein",
       "ageing": "8 Jahre",
       "wood": "dark oak",
       "pic": ""
@@ -28,15 +28,15 @@
     {
       "name": "Wein",
       "time": "5min",
-      "distill": "no",
+      "distill": "nein",
       "ageing": "20 Jahre",
-      "wood": "any",
+      "wood": "jedes",
       "pic": ""
     },
     {
       "name": "Metbier",
       "time": "3min",
-      "distill": "no",
+      "distill": "nein",
       "ageing": "4 Jahre",
       "wood": "oak",
       "pic": ""
@@ -44,7 +44,7 @@
     {
       "name": "Apfelmet",
       "time": "4min",
-      "distill": "no",
+      "distill": "nein",
       "ageing": "4 Jahre",
       "wood": "oak",
       "pic": ""
@@ -52,9 +52,9 @@
     {
       "name": "Apfelwein",
       "time": "7min",
-      "distill": "no",
+      "distill": "nein",
       "ageing": "3 Jahre",
-      "wood": "any",
+      "wood": "jedes",
       "pic": ""
     },
     {
@@ -86,7 +86,7 @@
       "time": "15min",
       "distill": "3x",
       "ageing": "0 Jahre",
-      "wood": "none",
+      "wood": "keines",
       "pic": ""
     },
     {
@@ -94,7 +94,7 @@
       "time": "18min",
       "distill": "5x",
       "ageing": "0 Jahre",
-      "wood": "none",
+      "wood": "keines",
       "pic": ""
     },
     {
@@ -102,7 +102,7 @@
       "time": "6min",
       "distill": "2x",
       "ageing": "0 Jahre",
-      "wood": "any",
+      "wood": "jedes",
       "pic": ""
     },
     {
@@ -118,7 +118,7 @@
       "time": "3min",
       "distill": "6x",
       "ageing": "0 Jahre",
-      "wood": "none",
+      "wood": "keines",
       "pic": ""
     },
     {
@@ -126,15 +126,15 @@
       "time": "5min",
       "distill": "6x",
       "ageing": "0 Jahre",
-      "wood": "none",
+      "wood": "keines",
       "pic": ""
     },
     {
       "name": "Eierlikör",
       "time": "2min",
-      "distill": "no",
+      "distill": "nein",
       "ageing": "3 Jahre",
-      "wood": "any",
+      "wood": "jedes",
       "pic": ""
     },
     {
@@ -142,7 +142,7 @@
       "time": "18min",
       "distill": "3x",
       "ageing": "0 Jahre",
-      "wood": "none",
+      "wood": "keines",
       "pic": ""
     },
     {
