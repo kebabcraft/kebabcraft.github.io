@@ -1,0 +1,156 @@
+{
+  "drinks": [
+    {
+      "name": "Beer",
+      "time": "8min",
+      "distill": "no",
+      "ageing": "3 years",
+      "wood": "any",
+      "pic": ""
+    },
+    {
+      "name": "Wheatbeer",
+      "time": "8min",
+      "distill": "no",
+      "ageing": "2 years",
+      "wood": "any",
+      "pic": ""
+    },
+    {
+      "name": "Darkbeer",
+      "time": "8min",
+      "distill": "no",
+      "ageing": "8 years",
+      "wood": "dark oak",
+      "pic": ""
+    },
+    {
+      "name": "Wine",
+      "time": "5min",
+      "distill": "no",
+      "ageing": "20 years",
+      "wood": "any",
+      "pic": ""
+    },
+    {
+      "name": "Mead",
+      "time": "3min",
+      "distill": "no",
+      "ageing": "4 years",
+      "wood": "oak",
+      "pic": ""
+    },
+    {
+      "name": "Apple Mead",
+      "time": "4min",
+      "distill": "no",
+      "ageing": "4 years",
+      "wood": "oak",
+      "pic": ""
+    },
+    {
+      "name": "Cidre",
+      "time": "7min",
+      "distill": "no",
+      "ageing": "3 years",
+      "wood": "any",
+      "pic": ""
+    },
+    {
+      "name": "Apple Liquor",
+      "time": "16min",
+      "distill": "3x",
+      "ageing": "6 years",
+      "wood": "acacia",
+      "pic": ""
+    },
+    {
+      "name": "Whiskey",
+      "time": "10min",
+      "distill": "2x",
+      "ageing": "18 years",
+      "wood": "spruce",
+      "pic": ""
+    },
+    {
+      "name": "Rum",
+      "time": "6min",
+      "distill": "2x",
+      "ageing": "14 years",
+      "wood": "oak",
+      "pic": ""
+    },
+    {
+      "name": "Vodka",
+      "time": "15min",
+      "distill": "3x",
+      "ageing": "0 years",
+      "wood": "none",
+      "pic": ""
+    },
+    {
+      "name": "Shroom Vodka",
+      "time": "18min",
+      "distill": "5x",
+      "ageing": "0 years",
+      "wood": "none",
+      "pic": ""
+    },
+    {
+      "name": "Gin",
+      "time": "6min",
+      "distill": "2x",
+      "ageing": "0 years",
+      "wood": "any",
+      "pic": ""
+    },
+    {
+      "name": "Tequila",
+      "time": "15min",
+      "distill": "2x",
+      "ageing": "12 years",
+      "wood": "birch",
+      "pic": ""
+    },
+    {
+      "name": "Absinthe",
+      "time": "3min",
+      "distill": "6x",
+      "ageing": "0 years",
+      "wood": "none",
+      "pic": ""
+    },
+    {
+      "name": "Green Absinthe",
+      "time": "5min",
+      "distill": "6x",
+      "ageing": "0 years",
+      "wood": "none",
+      "pic": ""
+    },
+    {
+      "name": "Eggnog",
+      "time": "2min",
+      "distill": "no",
+      "ageing": "3 years",
+      "wood": "any",
+      "pic": ""
+    },
+    {
+      "name": "Golden Vodka",
+      "time": "18min",
+      "distill": "3x",
+      "ageing": "0 years",
+      "wood": "none",
+      "pic": ""
+    },
+    {
+      "name": "Fire Whiskey",
+      "time": "12min",
+      "distill": "3x",
+      "ageing": "18 years",
+      "wood": "spruce",
+      "pic": ""
+    }
+  ]
+}
