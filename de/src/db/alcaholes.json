@@ -1,74 +1,74 @@
 {
   "drinks": [
     {
-      "name": "Beer",
+      "name": "Bier",
       "time": "8min",
       "distill": "no",
-      "ageing": "3 years",
+      "ageing": "3 Jahre",
       "wood": "any",
       "pic": ""
     },
     {
-      "name": "Wheatbeer",
+      "name": "Weizen-Bier",
       "time": "8min",
       "distill": "no",
-      "ageing": "2 years",
+      "ageing": "2 Jahre",
       "wood": "any",
       "pic": ""
     },
     {
-      "name": "Darkbeer",
+      "name": "dunkles Bier",
       "time": "8min",
       "distill": "no",
-      "ageing": "8 years",
+      "ageing": "8 Jahre",
       "wood": "dark oak",
       "pic": ""
     },
     {
-      "name": "Wine",
+      "name": "Wein",
       "time": "5min",
       "distill": "no",
-      "ageing": "20 years",
+      "ageing": "20 Jahre",
       "wood": "any",
       "pic": ""
     },
     {
-      "name": "Mead",
+      "name": "Metbier",
       "time": "3min",
       "distill": "no",
-      "ageing": "4 years",
+      "ageing": "4 Jahre",
       "wood": "oak",
       "pic": ""
     },
     {
-      "name": "Apple Mead",
+      "name": "Apfelmet",
       "time": "4min",
       "distill": "no",
-      "ageing": "4 years",
+      "ageing": "4 Jahre",
       "wood": "oak",
       "pic": ""
     },
     {
-      "name": "Cidre",
+      "name": "Apfelwein",
       "time": "7min",
       "distill": "no",
-      "ageing": "3 years",
+      "ageing": "3 Jahre",
       "wood": "any",
       "pic": ""
     },
     {
-      "name": "Apple Liquor",
+      "name": "Apfel Likör",
       "time": "16min",
       "distill": "3x",
-      "ageing": "6 years",
+      "ageing": "6 Jahre",
       "wood": "acacia",
       "pic": ""
     },
     {
-      "name": "Whiskey",
+      "name": "Wisky",
       "time": "10min",
       "distill": "2x",
-      "ageing": "18 years",
+      "ageing": "18 Jahre",
       "wood": "spruce",
       "pic": ""
     },
@@ -76,23 +76,23 @@
       "name": "Rum",
       "time": "6min",
       "distill": "2x",
-      "ageing": "14 years",
+      "ageing": "14 Jahre",
       "wood": "oak",
       "pic": ""
     },
     {
-      "name": "Vodka",
+      "name": "Vodga",
       "time": "15min",
       "distill": "3x",
-      "ageing": "0 years",
+      "ageing": "0 Jahre",
       "wood": "none",
       "pic": ""
     },
     {
-      "name": "Shroom Vodka",
+      "name": "Pilz-Vodga",
       "time": "18min",
       "distill": "5x",
-      "ageing": "0 years",
+      "ageing": "0 Jahre",
       "wood": "none",
       "pic": ""
     },
@@ -100,7 +100,7 @@
       "name": "Gin",
       "time": "6min",
       "distill": "2x",
-      "ageing": "0 years",
+      "ageing": "0 Jahre",
       "wood": "any",
       "pic": ""
     },
@@ -108,47 +108,47 @@
       "name": "Tequila",
       "time": "15min",
       "distill": "2x",
-      "ageing": "12 years",
+      "ageing": "12 Jahre",
       "wood": "birch",
       "pic": ""
     },
     {
-      "name": "Absinthe",
+      "name": "Absint",
       "time": "3min",
       "distill": "6x",
-      "ageing": "0 years",
+      "ageing": "0 Jahre",
       "wood": "none",
       "pic": ""
     },
     {
-      "name": "Green Absinthe",
+      "name": "grüner Absint",
       "time": "5min",
       "distill": "6x",
-      "ageing": "0 years",
+      "ageing": "0 Jahre",
       "wood": "none",
       "pic": ""
     },
     {
-      "name": "Eggnog",
+      "name": "Eierlikör",
       "time": "2min",
       "distill": "no",
-      "ageing": "3 years",
+      "ageing": "3 Jahre",
       "wood": "any",
       "pic": ""
     },
     {
-      "name": "Golden Vodka",
+      "name": "goldener Vodga",
       "time": "18min",
       "distill": "3x",
-      "ageing": "0 years",
+      "ageing": "0 Jahre",
       "wood": "none",
       "pic": ""
     },
     {
-      "name": "Fire Whiskey",
+      "name": "Feuer Wiskey",
       "time": "12min",
       "distill": "3x",
-      "ageing": "18 years",
+      "ageing": "18 Jahre",
       "wood": "spruce",
       "pic": ""
     }
