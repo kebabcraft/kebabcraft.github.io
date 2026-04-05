@@ -1,0 +1,100 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KebabCraftMC</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="theme-toggle.js"></script>
+    <link rel="shortcut icon" href="./src/img/favicon.webp" type="image/x-icon">
+    <div  id="header"></div>
+</head>
+
+<style>
+.update-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.update-card {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+
+.update-card:hover {
+    transform: scale(1.03);
+}
+
+.update-card img {
+    width: 100%;
+    border-radius: 8px;
+}</style>
+
+<body>
+<header>
+    <nav class="navbar" id="top">
+        <div class="fullhomething">
+            <a href="index.html">
+                <img class="home" src="./src/img/favicon.webp">
+                <img class="home-image-two" src="./src/img/kebabcrafttext.png">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <img src="./src/img/lightdarkicon.png">
+                </button>
+            </li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./join.html">Join</a></li>
+            <li><a href="./rules.html">Rules</a></li>
+            <li><a href="./store.html">Store</a></li>
+            <li><a href="./updates.html">Updates</a></li>
+            <li><a href="./socials.html">Socials</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <canvas id="sky"></canvas>
+    <div class="hero-content">
+        <h1><img src="./src/img/kebabcrafttext.png"></h1>
+        <h1>Custom Items</h1>
+        <p>Uses and Recipes</p>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="./panorama.js"></script>
+
+<main>
+    <section class="updates">
+
+        <p>We have 4 types of custom items:</p>
+        <ul>
+            <li>Weapons</li>
+            <li>Tools</li>
+            <li>Armor</li>
+            <li>Foods</li>
+            <li><a href="/alcaholes">Alcaholes</a></li>
+        </ul>
+
+        <p>Since we have so many custom items, we will show them in their corresponding sections.</p>
+
+        <div id="recipes-container"></div>
+
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 KebabCraftMC. All rights reserved.</p>
+</footer>
+
+<script src="./src/js/recepies.js"></script>
+</body>
+<script id="code"></script><script src="./src/lang/langControl.js"></script>
+</html>
