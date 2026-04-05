@@ -10,12 +10,8 @@ async function loadRecipes() {
         }
         const table = document.createElement("table");
         const thead = document.createElement("thead");
-        const headerRow = document.createElement("tr");
-        data.header.forEach(title => {
-            const th = document.createElement("th");
-            th.textContent = title;
-            headerRow.appendChild(th);
-        });
+        var headerRow = document.createElement("tr");
+        headerRow.innerHTML = data.header;
         thead.appendChild(headerRow);
         table.appendChild(thead);
         const tbody = document.createElement("tbody");
