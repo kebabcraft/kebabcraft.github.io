@@ -1,19 +1,19 @@
 { 
   "Weapons": [
     {
-      "name": "Musket",
-      "top-txt": "Can shoot or hit enemies.",
-      "sub-txt": "20 hearts ranged damage, iron sword melee damage.",
+      "name": "Moskete",
+      "top-txt": "Damit kannst du deine Feinde schlagen und abschießen.",
+      "sub-txt": "20 hearts schuss-schaden, Eisenschwert angriffs-Schaden.",
       "pic": "/src/img/recipes/musket.png"
     },{
-      "name": "Musket Ammo",
-      "top-txt": "Required for shooting.",
-      "sub-txt": "Items can be arranged freely.",
+      "name": "Masketen-Monition",
+      "top-txt": "Brauchst du um zu schießen.", 
+      "sub-txt": "Items können irgendwie angeordnet sein.",
       "pic": "/src/img/recipes/musketammo.png"
     },{
       "name": "Knife",
-      "top-txt": "Stab someone to death.",
-      "sub-txt": "Close range weappon.",
+      "top-txt": "Gut im nahkampf.",
+      "sub-txt": "Nahkampf-Waffe.",
       "pic": "/src/img/recipes/knife.png"
     }
   ],
