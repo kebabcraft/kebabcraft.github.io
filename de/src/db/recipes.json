@@ -59,7 +59,7 @@
       "pic": "/src/img/recipes/dough.png"
     },
     {
-      "name": "Hackfleisch",
+      "name": "Groundbeef",
       "top-txt": "Ja. Wirklich.",
       "sub-txt": "Freie Anordnung.",
       "pic": "/src/img/recipes/ground_beef.png"
@@ -71,8 +71,8 @@
       "pic": "/src/img/recipes/doner.png"
     },
     {
-      "name": "Drehender Kebab",
-      "top-txt": "Ein Kebab, der sich dreht!",
+      "name": "spinning Kebab",
+      "top-txt": "Ein Kebab, das sich dreht!",
       "sub-txt": "Beliebiges Fleisch außer Fisch und Schwein.",
       "pic": "/src/img/recipes/spinning_kebab.png"
     }
