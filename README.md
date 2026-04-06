@@ -1,1 +1,1 @@
-Die offizielle Website von KebabKraftMC
+The official Website of KebabKraftMC
