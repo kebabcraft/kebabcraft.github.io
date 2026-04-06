@@ -1,1 +1,12 @@
 - 🟥 index
+- 🟥 about
+- 🟥 alcaholes
+- 🟥 custom-items
+- 🟥 help
+- 🟥 join
+- 🟥 rules
+- 🟥 social
+- 🟥 score
+- 🟥 updates
+- 🟥 worlds
+  
