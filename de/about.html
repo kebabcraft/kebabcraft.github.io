@@ -95,7 +95,7 @@
         const container = document.getElementById('team-container');
         for (const [category, members] of Object.entries(teamData)) {
             const catDiv = document.createElement('div');
-            const h2Class = category === 'Honorable Mentions' ? 'honorable-mentions' : '';
+            const h2Class = category === 'Sigmas' ? 'sigmas' : '';
             catDiv.innerHTML = `<h2 class="${h2Class}">${category}</h2><ul></ul>`;
             const ul = catDiv.querySelector('ul');
 
