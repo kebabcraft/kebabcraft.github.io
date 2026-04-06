@@ -1,3 +1,4 @@
+# Overview
 - 🟢 index
 - 🟢 about
 - 🟢 alcaholes
@@ -9,4 +10,9 @@
 - 🟥 score
 - 🟥 updates
 - 🟥 worlds
-  
+# Description
+- 🟥 not started
+- 🟨 in progress
+- 🟧 to check (technicly)
+- 🟢 to ckeck (language)
+- 🟩 done
