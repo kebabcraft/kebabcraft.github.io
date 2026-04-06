@@ -1,11 +1,1 @@
-- ```[ ]``` index
-- ```[ ]``` about
-- ```[ ]``` help
-- ```[ ]``` join
-- ```[ ]``` rules
-- ```[ ]``` socials
-- ```[ ]``` store
-- ```[ ]``` updates
-- ```[ ]``` worlds
-- ```[ ]``` custom-items
-- ```[ ]``` about
+- 🟥 index
