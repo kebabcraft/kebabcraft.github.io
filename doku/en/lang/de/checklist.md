@@ -1,8 +1,8 @@
-- 🟥 index
-- 🟥 about
-- 🟥 alcaholes
-- 🟥 custom-items
-- 🟥 help
+- 🟢 index
+- 🟢 about
+- 🟢 alcaholes
+- 🟢 custom-items
+- 🟢 help
 - 🟥 join
 - 🟥 rules
 - 🟥 social
