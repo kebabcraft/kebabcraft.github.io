@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html> 
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>KebabCraftMC</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/theme-toggle.js"></script>
+    <link rel="shortcut icon" href="/src/img/favicon.webp" type="image/x-icon"/>
+    <div id="header"></div>
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="top">
+            <div class="fullhomething"><a href="index.html"><img class="home" src="/src/img/favicon.webp" alt="" /><img class="home-image-two" src="/src/img/kebabcrafttext.png" alt="KebabCraftMC"></a></div>
+            <ul class="nav-links">
+                <li><button class="theme-toggle" onclick="toggleTheme()"><img src="/src/img/lightdarkicon.png" alt="Hell/Dunkel-Modus"></button></li>
+                <li><a href="./about.html">Über<br>uns</a></li>
+                <li><a href="./join.html">Beitreten</a></li>
+                <li><a href="./rules.html">Regeln</a></li>
+                <li><a href="./store.html">Shop</a></li>
+                <li><a href="./updates.html">Updates</a></li>
+                <li><a href="./socials.html">Soziale<br>Medien</a></li>
+                <li><div id="lang-chose"></div></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+  <canvas id="sky"></canvas>
+  <div class="hero-content">
+    <h1><img src="/src/img/kebabcrafttext.png" alt="KebabCraftMC"></h1>
+    <h1>Serverregeln</h1>
+    <p>und Strafen</p>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="/panorama.js"></script>
+
+        <section class="rules">
+            <div class="rule-block">
+                <h2>1. Keine expliziten oder unangemessenen Inhalte</h2>
+                <ul>
+                    <li>Keine NSFW-Bauten, Schilder, Bücher oder Skins.</li>
+                    <li>Keine Gore-, Schock- oder verstörenden Inhalte.</li>
+                </ul>
+                <p class="punishment"><strong>Strafe:</strong> Sofortige Verwarnung oder Bann, je nach Schweregrad.</p>
+            </div>
+
+            <div class="rule-block">
+                <h2>2. Kein Spamming</h2>
+                <ul>
+                    <li>Kein Spam im Chat (z. B. wiederholte Nachrichten oder Zeichen, selbst wenn es nur ein Wort ist).</li>
+                </ul>
+                <p class="punishment"><strong>Strafe:</strong> Verwarnung oder Stummschaltung.</p>
+            </div>
+
+            <div class="rule-block">
+                <h2>3. Respektvolle Sprache verwenden</h2>
+                <ul>
+                    <li>Fluchen ist in Maßen erlaubt — übermäßige Beleidigungen können zu Stummschaltung oder Verwarnung führen.</li>
+                    <li>Rassistische Beleidigungen = sofortiger Bann (Dauer durch das Team).</li>
+                    <li>Hassrede = Verwarnung oder Bann, je nach Schweregrad.</li>
+                    <li>Gezielte Belästigung oder toxisches Verhalten = Stummschaltung und/oder Verwarnung.</li>
+                </ul>
+            </div>
+
+            <div class="rule-block">
+                <h2>4. Respektiere andere Spieler</h2>
+                <ul>
+                    <li>Kein Griefing oder Trolling außerhalb erklärter Kriege/Konflikte.</li>
+                    <li>Keine Umgehung der Kriegsregeln zur Belästigung.</li>
+                    <li>Kein Spawn-Killing.</li>
+                    <li>Kein wahlloses Töten.</li>
+                </ul>
+                <p class="punishment"><strong>Strafe:</strong> Verwarnung oder Bann, je nach Schweregrad.</p>
+            </div>
+
+            <div class="rule-block">
+                <h2>5. Sensible Themen</h2>
+                <ul>
+                    <li>Vermeide Trolling mit sensiblen Themen wie Rasse, Religion oder Kriegsverbrechen.</li>
+                </ul>
+                <p class="punishment"><strong>Strafe:</strong> Verwarnung, Stummschaltung oder Bann, je nach Inhalt und Absicht.</p>
+            </div>
+
+            <div class="rule-block">
+                <h2>6. Systeme korrekt nutzen</h2>
+                <ul>
+                    <li>Keine Bugs, Glitches oder unbeabsichtigte Mechaniken ausnutzen.</li>
+                </ul>
+                <p class="punishment"><strong>Strafe:</strong> Verwarnung oder Bann.</p>
+            </div>
+
+            <div class="rule-block">
+                <h2>7. Kein Hacking oder Cheating</h2>
+                <ul>
+                    <li>Keine Hack-Clients, Mods, Resource-Packs usw. (z. B. Kill Aura, Fly, X-ray, Baritone).</li>
+                    <li>Umgehungs-Cheats gelten weiterhin als Hacking.</li>
+                    <li>Jede Item-/Block-/Money-Duplizierung gilt als Cheating.</li>
+                </ul>
+                <p class="punishment"><strong>Strafe:</strong> Sofortiger Bann, Dauer abhängig vom Schweregrad.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KebabCraftMC. Alle Rechte vorbehalten. - Kein offizielles Minecraft-Produkt. Nicht mit Mojang oder Microsoft verbunden.</p>
+    </footer>
+</body>
+<script id="code"></script><script src="/src/lang/langControl.js"></script>
+</html>

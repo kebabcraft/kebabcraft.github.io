@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KebabCraftMC</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/theme-toggle.js"></script>
+  <link rel="shortcut icon" href="/src/img/favicon.webp" type="image/x-icon" />
+  <div id="header"></div>
+</head>
+<body>
+  <header>
+    <nav class="navbar" id="top">
+      <div class="fullhomething"><a href="index.html"><img class="home" src="/src/img/favicon.webp" alt="" /><img class="home-image-two" src="/src/img/kebabcrafttext.png" alt="KebabCraftMC"></a></div>
+      <ul class="nav-links">
+        <li>
+          <button class="theme-toggle" onclick="toggleTheme()">
+            <img src="/src/img/lightdarkicon.png" alt="Hell/Dunkel-Modus" />
+          </button>
+        </li>
+        <li><a href="./about.html">Über<br>uns</a></li>
+        <li><a href="./join.html">Beitreten</a></li>
+        <li><a href="./rules.html">Regeln</a></li>
+        <li><a href="./store.html">Shop</a></li>
+        <li><a href="./updates.html">Updates</a></li>
+        <li><a href="./socials.html">Soziale<br>Medien</a></li>
+        <li><div id="lang-chose"></div></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <canvas id="sky"></canvas>
+      <div class="hero-content">
+        <h1><img src="/src/img/kebabcrafttext.png" alt="KebabCraftMC"></h1>
+        <h1>So trittst du bei</h1>
+        <p>Folge diesen einfachen Schritten, um dein Abenteuer zu starten.</p>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+    <script src="/panorama.js"></script>
+
+    <section class="features">
+      <div id="step-display" class="feature-card"></div>
+    </section>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const steps = [
+        { icon: "🎮", title: "Schritt 1", text: "Starte Minecraft (1.21.11 oder neuer)" },
+        { icon: "🌐", title: "Schritt 2", text: "Gehe zu Mehrspieler > Server hinzufügen" },
+        { icon: "📝", title: "Schritt 3", text: "IP eingeben: play.kebabcraft.net" },
+        { icon: "🚀", title: "Schritt 4", text: "Klicke auf Beitreten und leg los!" }
+      ];
+
+      let index = 0;
+      const container = document.getElementById("step-display");
+
+      function updateStep() {
+        const step = steps[index];
+        index = (index + 1) % steps.length;
+
+        const incoming = document.createElement("div");
+        incoming.className = "feature-card slide-in";
+        incoming.innerHTML = `
+          <h3>${step.icon} ${step.title}</h3>
+          <p>${step.text}</p>
+        `;
+
+        const old = container.querySelector(".feature-card");
+
+        if (old) {
+          old.classList.remove("slide-in");
+          old.classList.add("slide-out");
+
+          old.addEventListener("animationend", () => {
+            if (old.parentNode === container) {
+              container.removeChild(old);
+            }
+          }, { once: true });
+        }
+
+        container.appendChild(incoming);
+      }
+
+      updateStep();
+      setInterval(updateStep, 3000);
+    });
+
+    // Copy-Funktion separat (sauber außerhalb)
+    function copyToClipboard(element) {
+      const text = element.textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Kopiert: " + text);
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+    }
+    </script>
+
+    <p>Version: 1.21.11+</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 KebabCraftMC. Alle Rechte vorbehalten. - Kein offizielles Minecraft-Produkt. Nicht mit Mojang oder Microsoft verbunden.</p>
+  </footer>
+</body>
+<script id="code"></script><script src="/src/lang/langControl.js"></script>
+</html>

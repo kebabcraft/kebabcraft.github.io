@@ -6,7 +6,6 @@
   <title>KebabCraftMC</title>
   <link rel="stylesheet" href="./styles.css" />
   <script src="theme-toggle.js"></script>
-  <script src="./src/lang/langControl.js"></script>
   <link rel="shortcut icon" href="./src/img/favicon.webp" type="image/x-icon" />
   <div id="header"></div>
 </head>
@@ -35,7 +34,7 @@
   <canvas id="sky"></canvas>
   <div class="hero-content">
     <h1><img src="./src/img/kebabcrafttext.png" alt="KebabCraftMC"></h1>
-    <h1>How to Join.</h1>
+    <h1>How to Join</h1>
     <p>Follow these simple steps to start your adventure.</p>
   </div>
 </section>
@@ -52,7 +51,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const steps = [
-    { icon: "🎮", title: "Step 1", text: "Launch Minecraft (1.21.11 or newer)" },
+    { icon: "🎮", title: "Step 1", text: "Launch Minecraft (1.21.11 or later)" },
     { icon: "🌐", title: "Step 2", text: "Go to Multiplayer > Add Server" },
     { icon: "📝", title: "Step 3", text: "Enter IP: play.kebabcraft.net" },
     { icon: "🚀", title: "Step 4", text: "Click Join and start playing!" }
@@ -92,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(updateStep, 3000);
 });
 
-// Copy function getrennt (sauber außerhalb)
+// Copy function separated (clean outside)
 function copyToClipboard(element) {
   const text = element.textContent;
   navigator.clipboard.writeText(text).then(() => {
@@ -105,12 +104,11 @@ function copyToClipboard(element) {
             </script>
 
             <p>Version: 1.21.11+</p>
-      </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 KebabCraftMC. All rights reserved. - Not an official Minecraft Product. Not affiliated with Mojang or microsoft.</p>
+    <p>&copy; 2025 KebabCraftMC. All rights reserved. - Not an official Minecraft Product. Not affiliated with Mojang or Microsoft.</p>
   </footer>
 </body>
-<script id="code"></script>
+<script id="code"></script><script src="./src/lang/langControl.js"></script>
 </html>
