@@ -19,7 +19,7 @@
     --ip-text: #ccc;
     --a-color: #ffb347;
     --image-invertion: 1;
-    --hero-color: #b652dd;
+    --hero-color: #27e3ff;
 }
 
 body.light {
@@ -43,7 +43,7 @@ body.light {
     --ip-text: #333;
     --a-color: #ff6600;
     --image-invertion: 0;
-    --hero-color: #c20cc2;
+    --hero-color: #27e3ff;
 }
 
 body {
