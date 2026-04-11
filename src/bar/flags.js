@@ -9,6 +9,11 @@
       label: "Deutsch",
       short: "DE",
       flag: "https://flagcdn.com/w40/de.png"
+    },
+    hu: {
+      label: "Magyar",
+      short: "HU",
+      flag: "https://flagcdn.com/w40/hu.png"
     }
   };
 
@@ -19,8 +24,8 @@
   container.setAttribute("aria-label", "Language selector");
 
   // Sprache nur anhand der URL erkennen
-  const path = window.location.pathname;
-  let currentLang = path.startsWith("/de") ? "de" : "en";
+  const pathParts = window.location.pathname.split("/").filter(Boolean);
+  let currentLang = (pathParts.length > 0 && LANGS[pathParts[0]]) ? pathParts[0] : "en";
 
   const current = document.createElement("button");
   current.type = "button";
@@ -64,20 +69,22 @@
       option.addEventListener("click", (e) => {
         e.stopPropagation();
 
-        let newPath = window.location.pathname;
         const search = window.location.search;
         const hash = window.location.hash;
+        const segments = window.location.pathname.split("/").filter(Boolean);
 
-        if (lang === "de") {
-          if (!newPath.startsWith("/de")) {
-            newPath = "/de" + (newPath === "/" ? "" : newPath);
-          }
-        } else {
-          newPath = newPath.replace(/^\/de/, "");
-          if (newPath === "") newPath = "/";
+        if (segments.length > 0 && LANGS[segments[0]]) {
+          segments.shift();
         }
 
-        window.location.href = newPath + search + hash;
+        let basePath = "/" + segments.join("/");
+        if (basePath === "") basePath = "/";
+
+        if (lang !== "en") {
+          basePath = "/" + lang + (basePath === "/" ? "" : basePath);
+        }
+
+        window.location.href = basePath + search + hash;
       });
 
       menu.appendChild(option);

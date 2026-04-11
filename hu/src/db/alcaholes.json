@@ -1,0 +1,157 @@
+﻿{
+  "header": "<tr><th>Név</th><th>Idő</th><th>Desztillálás</th><th>Érlelés</th><th>Fa</th><th>Kép</th></tr>",
+  "drinks": [
+    {
+      "name": "Sör",
+      "time": "8 perc",
+      "distill": "nem",
+      "ageing": "3 év",
+      "wood": "bármilyen",
+      "pic": ""
+    },
+    {
+      "name": "Búzasör",
+      "time": "8 perc",
+      "distill": "nem",
+      "ageing": "2 év",
+      "wood": "bármilyen",
+      "pic": ""
+    },
+    {
+      "name": "Barna sör",
+      "time": "8 perc",
+      "distill": "nem",
+      "ageing": "8 év",
+      "wood": "sötét tölgy",
+      "pic": ""
+    },
+    {
+      "name": "Bor",
+      "time": "5 perc",
+      "distill": "nem",
+      "ageing": "20 év",
+      "wood": "bármilyen",
+      "pic": ""
+    },
+    {
+      "name": "Mézsör",
+      "time": "3 perc",
+      "distill": "nem",
+      "ageing": "4 év",
+      "wood": "tölgy",
+      "pic": ""
+    },
+    {
+      "name": "Almás mézsör",
+      "time": "4 perc",
+      "distill": "nem",
+      "ageing": "4 év",
+      "wood": "tölgy",
+      "pic": ""
+    },
+    {
+      "name": "Almabor",
+      "time": "7 perc",
+      "distill": "nem",
+      "ageing": "3 év",
+      "wood": "bármilyen",
+      "pic": ""
+    },
+    {
+      "name": "Almalikőr",
+      "time": "16 perc",
+      "distill": "3x",
+      "ageing": "6 év",
+      "wood": "akác",
+      "pic": ""
+    },
+    {
+      "name": "Whiskey",
+      "time": "10 perc",
+      "distill": "2x",
+      "ageing": "18 év",
+      "wood": "lucfenyő",
+      "pic": ""
+    },
+    {
+      "name": "Rum",
+      "time": "6 perc",
+      "distill": "2x",
+      "ageing": "14 év",
+      "wood": "tölgy",
+      "pic": ""
+    },
+    {
+      "name": "Vodka",
+      "time": "15 perc",
+      "distill": "3x",
+      "ageing": "0 év",
+      "wood": "nincs",
+      "pic": ""
+    },
+    {
+      "name": "Gombás vodka",
+      "time": "18 perc",
+      "distill": "5x",
+      "ageing": "0 év",
+      "wood": "nincs",
+      "pic": ""
+    },
+    {
+      "name": "Gin",
+      "time": "6 perc",
+      "distill": "2x",
+      "ageing": "0 év",
+      "wood": "bármilyen",
+      "pic": ""
+    },
+    {
+      "name": "Tequila",
+      "time": "15 perc",
+      "distill": "2x",
+      "ageing": "12 év",
+      "wood": "nyír",
+      "pic": ""
+    },
+    {
+      "name": "Abszint",
+      "time": "3 perc",
+      "distill": "6x",
+      "ageing": "0 év",
+      "wood": "nincs",
+      "pic": ""
+    },
+    {
+      "name": "Zöld abszint",
+      "time": "5 perc",
+      "distill": "6x",
+      "ageing": "0 év",
+      "wood": "nincs",
+      "pic": ""
+    },
+    {
+      "name": "Tojáslikőr",
+      "time": "2 perc",
+      "distill": "nem",
+      "ageing": "3 év",
+      "wood": "bármilyen",
+      "pic": ""
+    },
+    {
+      "name": "Arany vodka",
+      "time": "18 perc",
+      "distill": "3x",
+      "ageing": "0 év",
+      "wood": "nincs",
+      "pic": ""
+    },
+    {
+      "name": "Tűzwhiskey",
+      "time": "12 perc",
+      "distill": "3x",
+      "ageing": "18 év",
+      "wood": "lucfenyő",
+      "pic": ""
+    }
+  ]
+}

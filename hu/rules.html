@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html> 
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>KebabCraftMC</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/theme-toggle.js"></script>
+    <link rel="shortcut icon" href="/src/img/favicon.webp" type="image/x-icon"/>
+    <div id="header"></div>
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="top">
+            <div class="fullhomething"><a href="index.html"><img class="home" src="/src/img/favicon.webp" alt="" /><img class="home-image-two" src="/src/img/kebabcrafttext.png" alt="KebabCraftMC"></a></div>
+            <ul class="nav-links">
+                <li><button class="theme-toggle" onclick="toggleTheme()"><img src="/src/img/lightdarkicon.png" alt="Világos/Sötét mód"></button></li>
+                <li><a href="./about.html">Rólunk</a></li>
+                <li><a href="./join.html">Csatlakozás</a></li>
+                <li><a href="./rules.html">Szabályok</a></li>
+                <li><a href="./store.html">Bolt</a></li>
+                <li><a href="./updates.html">Frissítések</a></li>
+                <li><a href="./socials.html">Közösségi<br>oldalak</a></li>
+                <li><div id="lang-chose"></div></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+  <canvas id="sky"></canvas>
+  <div class="hero-content">
+    <h1><img src="/src/img/kebabcrafttext.png" alt="KebabCraftMC"></h1>
+    <h1>Szerver szabályok</h1>
+    <p>és büntetések</p>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="/panorama.js"></script>
+
+        <section class="rules">
+            <div class="rule-block">
+                <h2>1. Semmilyen explicit vagy nem megfelelő tartalom</h2>
+                <ul>
+                    <li>Nincs NSFW építmény, tábla, könyv vagy skin.</li>
+                    <li>Nincs gore, sokkoló vagy zavaró tartalom.</li>
+                </ul>
+                <p class="punishment"><strong>Büntetés:</strong> Azonnali figyelmeztetés vagy kitiltás, súlyosságtól függően.</p>
+            </div>
+
+            <div class="rule-block">
+                <h2>2. Nincs spamelés</h2>
+                <ul>
+                    <li>Nincs spam a chatben (pl. ismételt üzenetek vagy karakterek, még ha csak egy szó is).</li>
+                </ul>
+                <p class="punishment"><strong>Büntetés:</strong> Figyelmeztetés vagy némítás.</p>
+            </div>
+
+            <div class="rule-block">
+                <h2>3. Használj tiszteletteljes nyelvet</h2>
+                <ul>
+                    <li>A káromkodás ésszerű keretek között megengedett — túlzott trágárság némításhoz vagy figyelmeztetéshez vezethet.</li>
+                    <li>Faji sértések = azonnali kitiltás (időtartamot a staff határozza meg).</li>
+                    <li>Gyűlöletbeszéd = figyelmeztetés vagy kitiltás, súlyosságtól függően.</li>
+                    <li>Célzott zaklatás vagy toxikus viselkedés = némítás és/vagy figyelmeztetés.</li>
+                </ul>
+            </div>
+
+            <div class="rule-block">
+                <h2>4. Tiszteld a többi játékost</h2>
+                <ul>
+                    <li>Nincs griefelés vagy trollkodás a bejelentett háborúkon/konfliktusokon kívül.</li>
+                    <li>A háborús szabályok kijátszása zaklatás céljából tilos.</li>
+                    <li>Nincs spawn kill.</li>
+                    <li>Nincs "naked" ölés.</li>
+                </ul>
+                <p class="punishment"><strong>Büntetés:</strong> Figyelmeztetés vagy kitiltás, súlyosságtól függően.</p>
+            </div>
+
+            <div class="rule-block">
+                <h2>5. Érzékeny témák</h2>
+                <ul>
+                    <li>Kerüld az érzékeny témákkal (pl. faji, vallási vagy háborús bűnök) való trollkodást.</li>
+                </ul>
+                <p class="punishment"><strong>Büntetés:</strong> Figyelmeztetés, némítás vagy kitiltás, a tartalomtól és a szándéktól függően.</p>
+            </div>
+
+            <div class="rule-block">
+                <h2>6. Használd a rendszereket rendeltetésszerűen</h2>
+                <ul>
+                    <li>Ne használd ki a hibákat, glitch-eket vagy nem szándékolt mechanikákat.</li>
+                </ul>
+                <p class="punishment"><strong>Büntetés:</strong> Figyelmeztetés vagy kitiltás.</p>
+            </div>
+
+            <div class="rule-block">
+                <h2>7. Nincs hackelés vagy csalás</h2>
+                <ul>
+                    <li>Tilos hack kliens, mod, resource pack stb. használata (pl. Kill Aura, Fly, X-ray, Baritone).</li>
+                    <li>A bypass cheat továbbra is hacknek számít.</li>
+                    <li>Bármilyen tárgy/blokk/pénz duplikálása csalásnak számít.</li>
+                </ul>
+                <p class="punishment"><strong>Büntetés:</strong> Azonnali kitiltás, időtartam a súlyosságtól függ.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KebabCraftMC. Minden jog fenntartva. - Nem hivatalos Minecraft termék. Nem kapcsolódik a Mojanghoz vagy a Microsofthoz.</p>
+    </footer>
+</body>
+<script id="code"></script><script src="/src/lang/langControl.js"></script>
+</html>

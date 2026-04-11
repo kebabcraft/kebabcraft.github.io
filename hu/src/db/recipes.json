@@ -1,0 +1,75 @@
+﻿{
+  "Weapons": [
+    {
+      "name": "Muskéta",
+      "top-txt": "Lőni vagy közelharcban ütni is lehet vele.",
+      "sub-txt": "20 szív távolsági sebzés, vaskard sebzés közelharcban.",
+      "pic": "./src/img/recipes/musket.png"
+    },{
+      "name": "Muskéta lőszer",
+      "top-txt": "Szükséges a lövéshez.",
+      "sub-txt": "A tárgyak szabadon elrendezhetők.",
+      "pic": "./src/img/recipes/musketammo.png"
+    },{
+      "name": "Kés",
+      "top-txt": "Szúrd le az ellenfelet.",
+      "sub-txt": "Közelharci fegyver.",
+      "pic": "./src/img/recipes/knife.png"
+    }
+  ],
+
+  "Tools": [
+    {
+      "name": "Fa rönkhasító",
+      "top-txt": "A felette lévő rönköket is kitöri.",
+      "sub-txt": "Csak azonos típusú rönkök.",
+      "pic": "./src/img/recipes/wooden_chopper.png"
+    },{
+      "name": "Favágó fejsze",
+      "top-txt": "Továbbfejlesztett hasító.",
+      "sub-txt": "Több rönköt tör ki függőlegesen.",
+      "pic": "./src/img/recipes/lumber_axe.png"
+    },{
+      "name": "Kemencés csákány",
+      "top-txt": "Csákány beépített kemencével.",
+      "sub-txt": "Legyen veled a kemence?",
+      "pic": "./src/img/recipes/oven_pickaxe.png"
+    }
+  ],
+  "Armor": [
+   {
+      "name": "Korona",
+      "top-txt": "A gazdagságod bemutatására.",
+      "sub-txt": "Sisak",
+      "pic": "./src/img/recipes/crown.png"
+    },{
+      "name": "Lovagi sisak",
+      "top-txt": "Úgy néz ki, mintha lovag lennél.",
+      "sub-txt": "Sisak",
+      "pic": "./src/img/recipes/knight_helmet.png"
+    }
+  ],
+  "Foods": [
+    {
+      "name": "Tészta",
+      "top-txt": "Alap hozzávaló.",
+      "sub-txt": "Szabad elrendezés.",
+      "pic": "./src/img/recipes/dough.png"
+    },{
+      "name": "Darálthús",
+      "top-txt": "Igen. Tényleg.",
+      "sub-txt": "Szabad elrendezés.",
+      "pic": "./src/img/recipes/ground_beef.png"
+    },{
+      "name": "Döner kebab",
+      "top-txt": "Jellegzetes étel.",
+      "sub-txt": "Szabad elrendezés.",
+      "pic": "./src/img/recipes/doner.png"
+    },{
+      "name": "Forgó kebab",
+      "top-txt": "Egy kebab, ami forog!",
+      "sub-txt": "Bármilyen hús, kivéve halat és sertést.",
+      "pic": "./src/img/recipes/spinning_kebab.png"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KebabCraftMC</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/theme-toggle.js"></script>
+    <link rel="shortcut icon" href="/src/img/favicon.webp" type="image/x-icon">
+    <div id="header"></div>
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="top">
+            <div class="fullhomething"><a href="index.html"><img class="home" src="/src/img/favicon.webp" alt="" /><img class="home-image-two" src="/src/img/kebabcrafttext.png" alt="KebabCraftMC"></a></div>
+            <ul class="nav-links">
+                <li><button class="theme-toggle" onclick="toggleTheme()"><img src="/src/img/lightdarkicon.png" alt="Világos/Sötét mód"></button></li>
+                <li><a href="./about.html">Rólunk</a></li>
+                <li><a href="./join.html">Csatlakozás</a></li>
+                <li><a href="./rules.html">Szabályok</a></li>
+                <li><a href="./store.html">Bolt</a></li>
+                <li><a href="./updates.html">Frissítések</a></li>
+                <li><a href="./socials.html">Közösségi<br>oldalak</a></li>
+                <li><div id="lang-chose"></div></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+  <canvas id="sky"></canvas>
+  <div class="hero-content">
+    <h1><img src="/src/img/kebabcrafttext.png" alt="KebabCraftMC"></h1>
+    <h1>Világok</h1>
+    <p>Hogyan működik a világ rendszerünk.</p>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="/panorama.js"></script>
+    
+    <main>
+        <section class="updates">
+            <ul class="update-grid">
+                Háromféle világunk van:
+                <li class="update-card">
+                    <h3>Earth-típus</h3>
+                    <p>Ez a világtípus a valós Föld 1:326-os másolata.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Minecraft-típus</h3>
+                    <p>Ez a világtípus egy normál Minecraft-világ.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Lobby-típus</h3>
+                    <p>Innen eléred az összes világtípust.</p>
+                </li>
+                És négy világunk van:
+                <li class="update-card">
+                    <h3>Earth World</h3>
+                    <p>Ez a világ Earth-típusú; itt lehet claimelni, és ez a szerver fő része.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Farmworld</h3>
+                    <p>Ez a világ erőforrásfarmolásra szolgál, hogy az Earth-világ ne legyen tele óriási lyukakkal és hasonlókkal.</p>
+                    <p>Ez a világ Minecraft-típusú.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Farmsworld</h3>
+                    <p>Itt építheted a farmjaidat, hogy ne kelljen őket az Earth-világban nézned.</p>
+                    <p>Ez a világ Minecraft-típusú.</p>
+                </li>
+                <li class="update-card">
+                    <h3>Lobby</h3>
+                    <p>Innen eléred az összes világot, és bárhonnan bejuthatsz ide a /lobby paranccsal. Egy békés, kellemes találkozóhely egy nagyon legális kartellel.</p>
+                    <p>Ez a világ Lobby-típusú.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KebabCraftMC. Minden jog fenntartva. - Nem hivatalos Minecraft termék. Nem kapcsolódik a Mojanghoz vagy a Microsofthoz.</p>
+    </footer>
+</body>
+<script id="code"></script><script src="/src/lang/langControl.js"></script>
+</html>

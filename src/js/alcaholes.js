@@ -2,7 +2,9 @@ async function loadRecipes() {
     const container = document.getElementById("recipes-container");
     container.innerHTML = ""; 
     try {
-        const res = await fetch("./src/db/alcaholes.json");
+        const pathParts = window.location.pathname.split("/").filter(Boolean);
+        const langPrefix = (pathParts[0] === "de" || pathParts[0] === "hu") ? `/${pathParts[0]}` : "";
+        const res = await fetch(`${langPrefix}/src/db/alcaholes.json`);
         const data = await res.json();
         if (!data.drinks || data.drinks.length === 0) {
             container.innerHTML = "<p>No drinks found.</p>";
@@ -17,6 +19,9 @@ async function loadRecipes() {
         const tbody = document.createElement("tbody");
         data.drinks.forEach(drink => {
             const tr = document.createElement("tr");
+            const pic = (drink.pic || "").startsWith("./src/")
+                ? drink.pic.replace("./", "/")
+                : drink.pic;
             tr.innerHTML = `
                 <td data-label="Name">${drink.name}</td>
                 <td data-label="Time">${drink.time}</td>
@@ -24,7 +29,7 @@ async function loadRecipes() {
                 <td data-label="Ageing">${drink.ageing || '-'}</td>
                 <td data-label="Wood">${drink.wood || '-'}</td>
                 <td data-label="Image">
-                    <img src="${drink.pic}" alt="${drink.name}">
+                    <img src="${pic}" alt="${drink.name}">
                 </td>
             `;
             tbody.appendChild(tr);

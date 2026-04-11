@@ -1,0 +1,8 @@
+﻿{
+    "supported": ["main"],
+    "main": [
+        ["top", false, "/src/lang/hu/top.html"],
+        ["header", false, "/src/bar/header.html"],
+        ["code", false, "/src/bar/flags.js"]
+    ]
+}

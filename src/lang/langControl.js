@@ -7,7 +7,8 @@ async function loadData(url, transform) {
 }
 const languages = {
   en: "/src/lang/en/dir.json",
-  de: "/src/lang/de/dir.json"
+  de: "/src/lang/de/dir.json",
+  hu: "/src/lang/hu/dir.json"
 };
 let lang;
 const pathParts = window.location.pathname.split("/").filter(Boolean);
