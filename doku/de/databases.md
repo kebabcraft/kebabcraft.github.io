@@ -1,3 +1,4 @@
+//standard von "https://github.com/aiincer/AIincer.github.io/blob/main/doku/standards/json.md"
 # rezepte
 - /src/db/recipes.json
 -                 - jso  - das json enthält mehrere der folgenden objekte
