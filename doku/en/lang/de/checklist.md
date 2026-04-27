@@ -4,12 +4,12 @@
 - 🟢 alcaholes
 - 🟢 custom-items
 - 🟢 help
-- 🟧 join
-- 🟧 rules
-- 🟧 social
-- 🟧 score
-- 🟧 updates
-- 🟧 worlds
+- 🟢 join
+- 🟢 rules
+- 🟢 social
+- 🟢 store
+- 🟢 updates
+- 🟢 worlds
 # Description
 - 🟥 not started
 - 🟨 in progress
